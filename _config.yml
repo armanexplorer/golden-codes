@@ -1,0 +1,197 @@
+theme: jekyll-theme-hacker
+
+# default: kramdown
+markdown: GFM
+
+title: Golden Codes - armanexplorer planet
+description: You will find practical code snippets of Git, Django, Python and others here
+
+
+exclude:
+  - "add-front-matter.sh"
+  - "update-cols.sh"
+
+
+defaults:
+  -
+    scope:
+      path: "_*"
+    values:
+      layout: default
+
+# NOTE: Don't add anything after the collections list (because of update cols script)
+collections:
+  bash:
+    output: true
+    permalink: /:collection/:name
+  mongodb:
+    output: true
+    permalink: /:collection/:name
+  git:
+    output: true
+    permalink: /:collection/:name
+  mattermost:
+    output: true
+    permalink: /:collection/:name
+  ufw:
+    output: true
+    permalink: /:collection/:name
+  mailserver:
+    output: true
+    permalink: /:collection/:name
+  network:
+    output: true
+    permalink: /:collection/:name
+  postfix:
+    output: true
+    permalink: /:collection/:name
+  ssl:
+    output: true
+    permalink: /:collection/:name
+  pm2:
+    output: true
+    permalink: /:collection/:name
+  automation:
+    output: true
+    permalink: /:collection/:name
+  s3cmd:
+    output: true
+    permalink: /:collection/:name
+  typescript:
+    output: true
+    permalink: /:collection/:name
+  gitlab:
+    output: true
+    permalink: /:collection/:name
+  cuda:
+    output: true
+    permalink: /:collection/:name
+  python:
+    output: true
+    permalink: /:collection/:name
+  bitbucket:
+    output: true
+    permalink: /:collection/:name
+  ssh:
+    output: true
+    permalink: /:collection/:name
+  docker_compose:
+    output: true
+    permalink: /:collection/:name
+  django:
+    output: true
+    permalink: /:collection/:name
+  systemd:
+    output: true
+    permalink: /:collection/:name
+  mk8s:
+    output: true
+    permalink: /:collection/:name
+  docker:
+    output: true
+    permalink: /:collection/:name
+  postgres:
+    output: true
+    permalink: /:collection/:name
+  rocketchat:
+    output: true
+    permalink: /:collection/:name
+  inference:
+    output: true
+    permalink: /:collection/:name
+  firewall:
+    output: true
+    permalink: /:collection/:name
+  seldon-v2:
+    output: true
+    permalink: /:collection/:name
+  dns:
+    output: true
+    permalink: /:collection/:name
+  logs:
+    output: true
+    permalink: /:collection/:name
+  ipv6:
+    output: true
+    permalink: /:collection/:name
+  DMS:
+    output: true
+    permalink: /:collection/:name
+  locales:
+    output: true
+    permalink: /:collection/:name
+  linux:
+    output: true
+    permalink: /:collection/:name
+  date:
+    output: true
+    permalink: /:collection/:name
+  gunicorn:
+    output: true
+    permalink: /:collection/:name
+  latex:
+    output: true
+    permalink: /:collection/:name
+  logging:
+    output: true
+    permalink: /:collection/:name
+  dbus:
+    output: true
+    permalink: /:collection/:name
+  article:
+    output: true
+    permalink: /:collection/:name
+  algo:
+    output: true
+    permalink: /:collection/:name
+  tmux:
+    output: true
+    permalink: /:collection/:name
+  deploy:
+    output: true
+    permalink: /:collection/:name
+  v2ray:
+    output: true
+    permalink: /:collection/:name
+  monitoring:
+    output: true
+    permalink: /:collection/:name
+  nginx:
+    output: true
+    permalink: /:collection/:name
+  ssh-tunneling:
+    output: true
+    permalink: /:collection/:name
+  sqlite:
+    output: true
+    permalink: /:collection/:name
+  gpu:
+    output: true
+    permalink: /:collection/:name
+  orchestration:
+    output: true
+    permalink: /:collection/:name
+  divar:
+    output: true
+    permalink: /:collection/:name
+  k3s:
+    output: true
+    permalink: /:collection/:name
+  circleci:
+    output: true
+    permalink: /:collection/:name
+  kubernetes:
+    output: true
+    permalink: /:collection/:name
+  github:
+    output: true
+    permalink: /:collection/:name
+  cloudflare:
+    output: true
+    permalink: /:collection/:name
+  curl:
+    output: true
+    permalink: /:collection/:name
+  general:
+    output: true
+    permalink: /:collection/:name

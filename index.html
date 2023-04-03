@@ -1,0 +1,30 @@
+---
+layout: default
+title: Home Page
+---
+
+<p>
+You can find many tricky code snippets in the following sections:
+</p>
+
+{% for collection in site.collections %}
+  {% if collection.label != "posts" %}
+    <h2>
+      {{ collection.label | capitalize }}
+    </h2>
+    <ul>
+      {% for doc in collection.docs %}
+        <li>
+          <a href="{{ doc.url }}">
+            {% if doc.title %}
+            {{ doc.title}}
+            {% else %}
+            {{ doc.path | split: "/" | last | split: "." | first }}
+            {% endif %}
+            <br><br>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}
