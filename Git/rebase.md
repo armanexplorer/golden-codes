@@ -51,8 +51,9 @@ Let’s say we have an example repo with branches like:
                o---o---o  featureB
 ```
 featureB is based on featureA, however, we realize featureB is not dependent on any of the changes in featureA and could just be branched off main.
-
- git rebase --onto main featureA featureB
+```
+git rebase --onto main featureA featureB
+```
 featureA is the ＜oldbase＞. main becomes the ＜newbase＞ and featureB is reference for what HEAD of the ＜newbase＞ will point to. The results are then:
 ```
                       o---o---o  featureB
