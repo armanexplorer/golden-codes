@@ -1,3 +1,9 @@
+---
+layout: default
+title: Git Rebase
+description: An intro to git rebase and its best practices
+---
+
 # Intro ([Atlassian])
 
 Git rebase in standard mode will automatically take the commits in your current working branch and apply them to the head of the passed branch.
@@ -63,6 +69,6 @@ featureA is the ＜oldbase＞. main becomes the ＜newbase＞ and featureB is re
           o---o---o---o---o  featureA
 ```
 
-[Atlassian]: (https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
+[Atlassian]: https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase
 
-[SDQ-Wiki]: (https://sdq.kastel.kit.edu/wiki/Git_pull_--rebase_vs._--merge)
+[SDQ-Wiki]: https://sdq.kastel.kit.edu/wiki/Git_pull_--rebase_vs._--merge

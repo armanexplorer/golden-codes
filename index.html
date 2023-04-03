@@ -1,0 +1,25 @@
+---
+layout: default
+title: Home Page
+---
+
+You can find many tricky snippets in this site through following sections:
+
+{% for collection in site.collections %}
+  {% if collection.label != "posts" %}
+    <h2>
+      {{ collection.label | capitalize }}
+    </h2>
+    <ul>
+      {% for doc in collection.docs %}
+      <h3>
+          <li>
+            <a href="{{ doc.url }}">
+              {{ doc.title }} - {{ doc.description }} ({{ doc.date | date: "%-d %B %Y" }})
+            </a>
+          </li>
+      </h3>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}
