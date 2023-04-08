@@ -7,3 +7,7 @@ collections:
   django:
     output: true
     permalink: /:collection/:name
+
+  python:
+    output: true
+    permalink: /:collection/:name
