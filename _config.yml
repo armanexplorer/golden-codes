@@ -1,3 +1,11 @@
+theme: jekyll-theme-hacker
+
+# default: kramdown
+markdown: GFM
+
+title: Golden Codes - armanexplorer planet
+description: You will find practical code snippets of Git, Django, Python and others here
+
 collections:
 
   git:
@@ -9,5 +17,9 @@ collections:
     permalink: /:collection/:name
 
   python:
+    output: true
+    permalink: /:collection/:name
+
+  typescript:
     output: true
     permalink: /:collection/:name
