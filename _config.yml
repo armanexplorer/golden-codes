@@ -23,3 +23,11 @@ collections:
   typescript:
     output: true
     permalink: /:collection/:name
+
+  ssh:
+    output: true
+    permalink: /:collection/:name
+
+  bash:
+    output: true
+    permalink: /:collection/:name
