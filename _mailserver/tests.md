@@ -16,3 +16,10 @@ title: test mail server is good enough
 [Make Your Email Whitelist](https://www.dnswl.org/selfservice/?action=register)
 
 [MimeCast dkim check](https://www.mimecast.com/products/dmarc-analyzer/dkim-check/)
+
+
+# Spam check
+[**ref**](https://kickbox.com/email-spam-tester/)
+[ref](https://www.experte.com/spam-checker)
+[ref](https://cleantalk.org/email-checker)
+[reef](https://www.mail-tester.com/)
