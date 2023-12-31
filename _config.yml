@@ -195,3 +195,15 @@ collections:
   general:
     output: true
     permalink: /:collection/:name
+  kubectl:
+    output: true
+    permalink: /:collection/:name
+  microk8s:
+    output: true
+    permalink: /:collection/:name
+  helm:
+    output: true
+    permalink: /:collection/:name
+  nfs:
+    output: true
+    permalink: /:collection/:name
