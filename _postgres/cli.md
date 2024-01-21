@@ -26,3 +26,6 @@ ALTER TABLE your_table_name DROP CONSTRAINT constraint_name;
 dropdb db_name
 createdb db_name
 ```
+
+## force drop db
+dropdb db_name --force

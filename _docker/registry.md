@@ -1,17 +1,43 @@
 ---
-title:
+title: docker registry install and configurations 
 description: 
 ---
 
+[Configs](https://gdevillele.github.io/registry/configuration/)
 [Documents](https://distribution.github.io/distribution/about/deploying/)
 [Doc2](https://phoenixnap.com/kb/set-up-a-private-docker-registry)
+[Parspack Manual](https://parspack.com/blog/os/linux/ubuntu/how-to-set-up-a-private-docker-registry-on-ubuntu-22-04)
 
 # install docker registry
 [Reference](https://docs.docker.com/registry/deploying/)
-```bash
-curl -sS -X GET -H "Authorization: Basic XXXXXXXXXXXXXXXXXXXXXXXXX" https://docker.example.com/v2/my_repo/tags/list | jq -r '.tags[]' | grep -vE 'dev$|latest|test' | xargs -I{} sh -c $'curl -sS -I -H "Authorization: Basic XXXXXXXXXXXXXXXXXXXXXXXXX" -H "Accept: application/vnd.docker.distribution.manifest.v2+json" https://example.com/v2/project_token/manifests/{} | grep Docker-Content-Digest | cut -d" " -f2 | sed \'s/\s//g\' | xargs -I[] curl -I -X DELETE -H "Authorization: Basic XXXXXXXXXXXXXXXXXXXXXXXXX" "https://docker.exmaple.com/v2/my_repo/manifests/[]"'
-```
 
+## docker compose
+```yaml
+version: '3.8'
+
+services:
+
+  registry:
+    image: registry:2
+    container_name: registry
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      TZ: Asia/Tehran
+      REGISTRY_AUTH: htpasswd
+      REGISTRY_AUTH_HTPASSWD_REALM: Registry-Realm
+      REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+      REGISTRY_STORAGE_DELETE_ENABLED: true
+      REGISTRY_HTTP_SECRET: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX # you shoud get some random thing
+
+      # this will remove the extra pahts to the data
+      # REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    volumes:
+      - ./data:/var/lib/registry  # it is better to put `./data:/data` instead, but you should set REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY=/data env
+      - ./auth:/auth
+      - ./config:/etc/docker/registry
+```
 # set basic auth
 ```bash
 DOCKER_REGISTRY_BASIC_AUTH_DIR=docker_reg_basic_auth

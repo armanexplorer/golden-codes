@@ -207,3 +207,48 @@ collections:
   nfs:
     output: true
     permalink: /:collection/:name
+  cpu:
+    output: true
+    permalink: /:collection/:name
+  node:
+    output: true
+    permalink: /:collection/:name
+  og:
+    output: true
+    permalink: /:collection/:name
+  data_science:
+    output: true
+    permalink: /:collection/:name
+  yolo:
+    output: true
+    permalink: /:collection/:name
+  aws:
+    output: true
+    permalink: /:collection/:name
+  zsh:
+    output: true
+    permalink: /:collection/:name
+  rclone:
+    output: true
+    permalink: /:collection/:name
+  telegram:
+    output: true
+    permalink: /:collection/:name
+  sql:
+    output: true
+    permalink: /:collection/:name
+  cs:
+    output: true
+    permalink: /:collection/:name
+  google:
+    output: true
+    permalink: /:collection/:name
+  random:
+    output: true
+    permalink: /:collection/:name
+  nextjs:
+    output: true
+    permalink: /:collection/:name
+  nano:
+    output: true
+    permalink: /:collection/:name

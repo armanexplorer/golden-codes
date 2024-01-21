@@ -1,4 +1,4 @@
 ---
 ---
 
-[Reference](https://docs.docker.com/compose/networking/)
+[Main Doc](https://docs.docker.com/compose/compose-file/compose-file-v3/)

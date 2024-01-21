@@ -2,6 +2,7 @@
 ---
 
 # Install Docker CE
+[Docker Installation](https://docs.docker.com/engine/install/debian/)
 
 ## Setup docker apt repository
 
@@ -33,5 +34,3 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ``` 
-
-[Docker Installation](https://docs.docker.com/engine/install/ubuntu/)

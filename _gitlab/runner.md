@@ -15,7 +15,7 @@ docker run -d --name gitlab-runner --restart always \
 
 ## Register runner through the gitlab webstie (Recommended)
 ```bash
-docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register  --url https://example.com  --token glrt-EDx1YqkeQhZDjs2YBxBL
+docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register  --url https://gitlab.eridanus.ir  --token glrt-AuFGxtvgCV9ydFca9jQu
 ```
 
 # Register runner posibbly more interactivey
@@ -34,3 +34,6 @@ docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitla
 [autoscale](https://docs.gitlab.com/runner/configuration/autoscale.html)
 
 [ref](https://archives.docs.gitlab.com/16.3/ee/ci/runners/configure_runners.html)
+
+# docker image tags
+[Docker Hub Link](https://hub.docker.com/r/gitlab/gitlab-runner/tags)
