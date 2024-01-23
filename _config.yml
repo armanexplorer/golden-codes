@@ -252,3 +252,6 @@ collections:
   nano:
     output: true
     permalink: /:collection/:name
+  makefile:
+    output: true
+    permalink: /:collection/:name
