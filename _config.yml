@@ -255,3 +255,6 @@ collections:
   makefile:
     output: true
     permalink: /:collection/:name
+  vscode:
+    output: true
+    permalink: /:collection/:name
