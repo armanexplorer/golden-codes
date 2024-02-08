@@ -258,3 +258,9 @@ collections:
   vscode:
     output: true
     permalink: /:collection/:name
+  debian:
+    output: true
+    permalink: /:collection/:name
+  ffmpeg:
+    output: true
+    permalink: /:collection/:name

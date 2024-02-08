@@ -13,12 +13,11 @@
 
 
 # customize a theme in on-my-zsh
+Add full current directory and time to the prompt
 [Link](https://stackoverflow.com/questions/27885057/zsh-theme-for-full-path-display-git-changes)
 ```bash
 cp $ZSH/themes/$ZSH_THEME.zsh-theme $ZSH_CUSTOM/themes/
-
-# change the %c to %~ to have the full path (%~ or %d) instead of only the current dir
-nano $ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme
+sed -i.bak 's/^PROMPT=.*/PROMPT="%{$fg_bold[green]%}[%*] %(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%~%{$reset_color%}"/' $ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme
 
 # replace current shell with new zsh shell
 exec zsh
