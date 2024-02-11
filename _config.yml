@@ -264,3 +264,6 @@ collections:
   ffmpeg:
     output: true
     permalink: /:collection/:name
+  certbot:
+    output: true
+    permalink: /:collection/:name

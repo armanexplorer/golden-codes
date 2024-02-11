@@ -10,3 +10,7 @@ helm get values minio -n minio-system
 
 # get the all relase values 
 helm get values minio -n minio-system --all
+
+
+# get all things about this release as a yaml file (not just values)
+helm get all minio -n minio-system
