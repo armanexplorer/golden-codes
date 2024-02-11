@@ -176,6 +176,8 @@ kubectl logs -n nebuly-nvidia -l app.kubernetes.io/name=nebuly-nvidia-device-plu
 kubectl logs -n nebuly-nvidia -l app.kubernetes.io/name=nebuly-nvidia-device-plugin -f -c nvidia-mps-server
 
 spw
+# or 
+watch -n 1 kubectl get all
 ```
 
 ## troubleshooting
@@ -204,4 +206,30 @@ msg="Label change detected: nvidia.com/device-plugin.config=arman-gpu-1707430327
 time="2024-02-09T16:25:33Z" 
 level=info msg="Error: specified config arman-gpu-1707430327 does not exist"
 Error from server (BadRequest): container "nvidia-device-plugin-sidecar" in pod "nvidia-device-plugin-nebu
+```
+
+### check the values have been applied
+
+You can ensure the helm custom values have been set correctly by:
+
+```bash
+helm get values gpu-operator -n gpu-operator-resources
+```
+
+Or check all of the values by:
+
+```bash
+helm get values gpu-operator  -n gpu-operator-resources --all
+```
+
+Or get ALL INFO about the release:
+
+```bash
+helm get all gpu-operator  -n gpu-operator-resources
+```
+
+Or only check the chart table values by:
+
+```bash
+helm show values nvidia/gpu-operator
 ```

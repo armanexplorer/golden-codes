@@ -1,5 +1,5 @@
 ---
-title: how we should install nos to enable MPS?
+title: how we should get all logs of nos?
 ---
 
 ## yolo
