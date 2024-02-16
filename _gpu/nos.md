@@ -216,6 +216,28 @@ You can ensure the helm custom values have been set correctly by:
 helm get values gpu-operator -n gpu-operator-resources
 ```
 
+it should be like this:
+
+```yaml
+driver:
+  enabled: "true"
+mig:
+  strategy: mixed
+migManager:
+  enabled: false
+operator:
+  defaultRuntime: containerd
+toolkit:
+  enabled: true
+  env:
+  - name: CONTAINERD_CONFIG
+    value: /var/snap/microk8s/current/args/containerd-template.toml
+  - name: CONTAINERD_SOCKET
+    value: /var/snap/microk8s/common/run/containerd.sock
+  - name: CONTAINERD_SET_AS_DEFAULT
+    value: "1"
+```
+
 Or check all of the values by:
 
 ```bash

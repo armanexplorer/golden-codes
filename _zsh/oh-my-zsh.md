@@ -1,20 +1,24 @@
 ---
+title: oh-my-zsh hacks
 ---
 
 [Repo](https://github.com/ohmyzsh/ohmyzsh/tree/master)
 
-# requried fonts for some themes
+## requried fonts for some themes
+
 [Powerline](https://github.com/powerline/fonts)
 
 [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
 
-# install zsh first
+## install zsh first
+
 [Ref](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 
+## customize a theme in on-my-zsh
 
-# customize a theme in on-my-zsh
 Add full current directory and time to the prompt
 [Link](https://stackoverflow.com/questions/27885057/zsh-theme-for-full-path-display-git-changes)
+
 ```bash
 cp $ZSH/themes/$ZSH_THEME.zsh-theme $ZSH_CUSTOM/themes/
 sed -i.bak 's/^PROMPT=.*/PROMPT="%{$fg_bold[green]%}[%*] %(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%~%{$reset_color%}"/' $ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme
@@ -23,7 +27,8 @@ sed -i.bak 's/^PROMPT=.*/PROMPT="%{$fg_bold[green]%}[%*] %(?:%{$fg_bold[green]%}
 exec zsh
 ```
 
-## prompt example (custom robbyrussell theme)
+### prompt example (custom robbyrussell theme)
+
 ```zsh
 PROMPT="%{$fg_bold[magenta]%}[%*] %(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%~%{$reset_color%}"
 PROMPT+=' $(git_prompt_info)'

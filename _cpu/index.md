@@ -3,4 +3,5 @@
 
 
 # get cpu details
+
 lscpu

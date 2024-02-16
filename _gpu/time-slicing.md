@@ -1,4 +1,5 @@
 ---
+title: GPU time-slicing
 ---
 
 The NVIDIA GPU Operator enables oversubscription of GPUs through a set of extended options for the NVIDIA Kubernetes Device Plugin. GPU time-slicing enables workloads that are scheduled on oversubscribed GPUs to interleave with one another.

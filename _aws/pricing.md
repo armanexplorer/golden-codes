@@ -1,11 +1,14 @@
 ---
+title: aws services pricing
 ---
 
-# calculator
+## calculator
+
 [AWS Calculator](https://calculator.aws/)
 [What Is AWS Pricing Calculator](https://docs.aws.amazon.com/pricing-calculator/latest/userguide/what-is-pricing-calculator.html)
 
-# ECS
+## ECS
+
 [ECS Pricing (BEST)](https://blog.awsfundamentals.com/amazon-ecs-pricing)
 
 [CloudZero](https://www.cloudzero.com/blog/ecs-pricing/)

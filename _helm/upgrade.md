@@ -2,6 +2,7 @@
 ---
 
 # upgrade with new values
+
 ```bash
 # main methods
 helm upgrade gpu-operator nvidia/gpu-operator -n gpu-operator-resources --set devicePlugin.enabled=false

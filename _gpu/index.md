@@ -1,15 +1,15 @@
 ---
+title: check gpu device
 ---
 
-# get details
+## get details
+
 ```bash
 lspci -v | grep -A 10 VGA
 ```
 
-# verify drivers are loaded
+## verify drivers are loaded
+
+```bash
 nvidia-smi
-
-# enable GPU Operator
-microk8s enable gpu
-
-[nos (GPU partitionting)](https://github.com/nebuly-ai/nos)
+```

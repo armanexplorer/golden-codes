@@ -1,4 +1,5 @@
 ---
+title: yolo model
 ---
 
 [Github Page](https://github.com/ultralytics/yolov5)

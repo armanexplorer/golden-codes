@@ -8,9 +8,11 @@ Kubernetes provides access to special hardware resources such as NVIDIA GPUs, NI
 
 [Install](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/getting-started.html)
 
-# install in MicroK8s
+## install in MicroK8s
+
 [Install on MicroK8s](https://microk8s.io/docs/addon-gpu)
 [Infer Repo](https://github.com/reconfigurable-ml-pipeline/infrastructure/blob/master/manual-installation/gpu.md)
+
 ```bash
 microk8s enable gpu
 
@@ -23,7 +25,6 @@ kubectl get all -n gpu-operator-resources
 # check the capability has been added (expected: 'nvidia.com/gpu: 1' in Capability)
 kubectl describe node arman-gpu
 ```
-
 
 [GitHub](https://github.com/NVIDIA/gpu-operator)
 
