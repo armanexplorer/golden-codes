@@ -2,20 +2,30 @@
 title: useful links in different subjects
 ---
 
-# awsome dockerfiles and docker composese
+## awsome dockerfiles and docker composese
+
 [ref](https://github.com/docker/awesome-compose)
 
-# configurations
+## configurations
+
 [ref](https://exampleconfig.com/)
 
-# fully analyize websites (Google)
+## fully analyize websites (Google)
+
 [ref](https://pagespeed.web.dev/)
 
-# find dataset
+## find dataset
+
 [ref](https://datasetsearch.research.google.com/)
 
-# auto generate front-end code
+## auto generate front-end code
+
 [ref](https://v0.dev/)
 
-# regex testbed
+## regex testbed
+
 [ref](https://regexr.com/)
+
+## how to choose license
+
+[Ref](https://choosealicense.com/)

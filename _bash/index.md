@@ -2,6 +2,8 @@
 title: general information and hacks
 ---
 
+[Docs](https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/)
+
 ## ./script.sh VS source ./script.sh
 
 In Linux, there is a difference between running a script using `./script.sh` and `source ./script.sh`.
@@ -15,6 +17,8 @@ It's important to note that `source` is a Bash built-in command, so it will only
 
 ## import functions from a shell script
 
+This could be avoided by [like this](https://stackoverflow.com/questions/63301843/is-it-possible-to-source-a-bash-script-to-load-its-functions-without-executing-i). But if you wnat to do that anyway, this is the way:
+
 [Ref](https://stackoverflow.com/questions/12815774/importing-functions-from-a-shell-script)
 
 ```bash
@@ -27,10 +31,11 @@ main() {
     code
 }
 
-# the `BASH_SOURCE` provides the executer filename if it is running directly
+# the `BASH_SOURCE` is the executers array (0=Current, 1=Sourcer, 2=Sourcer of Sourcer, ...)
 if [[ "${#BASH_SOURCE[@]}" -eq 1 ]]; then
     main "$@"
 fi
 ```
 
 The expression `${#BASH_SOURCE[@]}` in Bash is used to obtain the number of elements in the `BASH_SOURCE` array. The `BASH_SOURCE` array contains the source filenames where the corresponding shell function names in the FUNCNAME array variable are defined. It is particularly useful when a script is being sourced, as it provides the source filenames of the executing script and its callers. This information can be used, for example, to **determine if the script is being directly executed or being sourced from another script**.
+

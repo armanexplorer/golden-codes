@@ -267,3 +267,36 @@ collections:
   certbot:
     output: true
     permalink: /:collection/:name
+  kde:
+    output: true
+    permalink: /:collection/:name
+  nvim:
+    output: true
+    permalink: /:collection/:name
+  s3fs-fuse:
+    output: true
+    permalink: /:collection/:name
+  gnome:
+    output: true
+    permalink: /:collection/:name
+  geo_spatial:
+    output: true
+    permalink: /:collection/:name
+  sshfs:
+    output: true
+    permalink: /:collection/:name
+  redis:
+    output: true
+    permalink: /:collection/:name
+  vpn:
+    output: true
+    permalink: /:collection/:name
+  display_manager:
+    output: true
+    permalink: /:collection/:name
+  proxy_chains:
+    output: true
+    permalink: /:collection/:name
+  mc:
+    output: true
+    permalink: /:collection/:name
