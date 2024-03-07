@@ -5,7 +5,7 @@ title: how to set up infru. of cc servers with MPS gpu equipped
 ## clone ipa through terminal using HTTPS
 
 ```bash
-https://github.com/armanexplorer/ipa-arman.git
+git clone https://github.com/armanexplorer/ipa-arman.git ~/ipa
 ```
 
 ## disable man-db cache re-indexing (make system slow in lower than 2.10 versions)
@@ -26,15 +26,28 @@ customize_zsh
 
 ## VS Code
 
+Work with VS Code to clone private repo and enabling jupyter
+
+### remove old ssh host key
+
+Run this in your local system with the remote server IP instead of the following
+
+```bash
+ssh-keygen -f "/home/arman/.ssh/known_hosts" -R "192.5.87.154"
+```
+
+### open the remote host
+
 - Open the remote host in VS Cdoe to be able to pull codes from private repos
 - install `@id:ms-python.python` extension
-- install `jupyter` extension
-- install `@id:ms-vscode.makefile-tools` extension (optional)
+- install `@id:ms-toolsai.jupyter` extension
+- install `@id:ms-vscode.makefile-tools` extension (optional - makefile formatter)
+- install `@id:foxundermoon.shell-format`extension (optional - bash formatter)
 
 ## clone ipa-private using HTTPS
 
 ```bash
-https://github.com/armanexplorer/ipa-private-arman.git
+git clone --single-branch --branch cg https://github.com/armanexplorer/ipa-private-arman.git ~/ipa-private
 ```
 
 ## config git credentials
@@ -52,11 +65,29 @@ git config --list
 
 ## run build.sh
 
-Open tmux and run build.sh script
+Open tmux and run `build.sh` script
 
 ```bash
 tmux
 ~/ipa/infrastructure/build.sh
+```
+
+## add gpu (optional)
+
+```bash
+source ~/ipa/infrastructure/hack/gpu.sh
+```
+
+### with MPS partitioning
+
+```bash
+enable_mps_gpu
+```
+
+### single GPU
+
+```bash
+enable_single_gpu
 ```
 
 ## build yolo model

@@ -1,7 +1,9 @@
 ---
+title: start with DMS
 ---
 
-# Setup
+## Setup
+
 ```bash
 # Get All Files
 DMS_GITHUB_URL="https://raw.githubusercontent.com/docker-mailserver/docker-mailserver/master"
@@ -9,8 +11,8 @@ wget "${DMS_GITHUB_URL}/compose.yaml"
 wget "${DMS_GITHUB_URL}/mailserver.env"
 
 # edit compose.yaml
-"append '/etc/letsencrypt:/etc/letsencrypt' to the volumes for enabling lets encrypt"
-"change the hostname to the hostname of mail server (mail.example.com)"
+- "append '/etc/letsencrypt:/etc/letsencrypt' to the volumes for enabling lets encrypt"
+- "change the hostname to the hostname of mail server (mail.example.com)"
 
 # edit mailserver.env (all environments are there)
 ENABLE_RSPAMD=1
@@ -22,7 +24,7 @@ ENABLE_SPAMASSASSIN=0
 SSL_TYPE=letsencrypt
 ...
 
-"I also added:"
+# I also added:
 ENABLE_CLAMAV=1
 ENABLE_FAIL2BAN=1
 
@@ -44,9 +46,9 @@ mkdir -p ./docker-data/dms/config/rspamd/override.d/
 # add the settings of Rsampd for dns (from https://rspamd.com/doc/configuration/options.html) to the override.d
 cat > ./docker-data/dms/config/rspamd/override.d/options.inc <<EOF
 options {
-	dns {
-		nameserver = ["127.0.0.1:53"];
-	}
+ dns {
+  nameserver = ["127.0.0.1:53"];
+ }
 }
 EOF
 
@@ -56,6 +58,7 @@ set-option-for-module classifier-bayes autolearn true
 EOF
 
 # config DKIM by running this and save the output as TXT DNS record
+# ! WARNING: IT IS ONLY FOR ONE DOMAIN, FOR MULTIPLE, CHECK THE DKIM DOCS
 docker exec -it mailserver setup config dkim domain example.com
 
 # add DMARC record with the help of some good site (https://dmarcguide.globalcyberalliance.org/dmarc)
@@ -70,7 +73,8 @@ docker exec -ti mailserver setup alias add t2@example.com t22@gmail.com
 # done with the installation
 ```
 
-# Important References
+## Important References
+
 [Github](https://github.com/docker-mailserver/docker-mailserver)
 
 [Documents](https://docker-mailserver.github.io/docker-mailserver/edge/)
@@ -91,7 +95,8 @@ docker exec -ti mailserver setup alias add t2@example.com t22@gmail.com
 
 [Sample DMS Docker Compose](https://github.com/docker-mailserver/docker-mailserver/blob/master/compose.yaml)
 
-# tools
+## tools
+
 [R1](https://mxtoolbox.com/SuperTool.aspx)
 
 [R2](https://www.mimecast.com/products/dmarc-analyzer/spf-record-check/)
@@ -106,7 +111,7 @@ docker exec -ti mailserver setup alias add t2@example.com t22@gmail.com
 
 [DMARC Guide](https://dmarcguide.globalcyberalliance.org/dmarc)
 
-# Other References
+## Other References
 
 [FAQ](https://docker-mailserver.github.io/docker-mailserver/edge/faq/#what-about-the-docker-datadmsconfig-directory)
 

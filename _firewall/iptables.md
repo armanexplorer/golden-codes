@@ -1,16 +1,24 @@
 ---
+title: all about iptables
 ---
 
-# All about tables and chains and netfilter hooks
+[Docs](https://www.netfilter.org/documentation/HOWTO/NAT-HOWTO.html)
+![alt text](image.png)
+
+## All about tables and chains and netfilter hooks
+
 [best reference for iptables and its relation to linux kernel (netflix hooks)](https://www.digitalocean.com/community/tutorials/a-deep-dive-into-iptables-and-netfilter-architecture)
 
-# Traversing of tables and chains
+## Traversing of tables and chains
+
 [Ref1](https://rlworkman.net/howtos/iptables/chunkyhtml/c962.html)
 
-# Iptables in debian
+## Iptables in debian
+
 [Ref2](https://wiki.debian.org/iptables)
 
-# practical flgas
+## practical flgas
+
 ```bash
 # List the rules in a chain or all chains (-n: numeric addresses)
 iptables -L -n
@@ -25,7 +33,10 @@ iptables -t mangle
 iptables -I chain_name 1
 ```
 
-# docker config
+## docker config
+
+[Route over specefic host interface](https://maxammann.org/posts/2020/04/routing-docker-container-over-vpn/)
+
 ```bash
 # block outgoing TCP traffic to destination port 80 for the country with the country code "IR" (Iran)
 sudo iptables -A OUTPUT -m geoip -p tcp --destination-port 80 --dst-cc IR -j DROP
@@ -40,11 +51,12 @@ sudo iptables -A INPUT -p tcp -i docker0 -d {ip_address} --dport 8015 -j ACCEPT
 sudo iptables -A INPUT -p tcp -d {ip_address} --dport 8015 -j ACCEPT
 ```
 
+## logging in iptables
 
-# logging in iptables
 [Ref1](https://www.ibm.com/docs/hr/dsm?topic=iptables-configuring)
 
-# iptables help
+## iptables help
+
 ```bash
 iptables v1.8.7
 
@@ -116,3 +128,38 @@ Options:
   --set-counters PKTS BYTES     set the counter during insert/append
 [!] --version   -V              print package version.
 ```
+
+## persistant
+
+[Docs](https://wiki.debian.org/iptables)
+
+### first solution
+
+```bash
+iptables-save > /etc/iptables.up.rules
+cat <<EOF > /etc/network/if-pre-up.d/iptables
+#!/bin/sh
+/sbin/iptables-restore < /etc/iptables.up.rules
+EOF
+chmod +x /etc/network/if-pre-up.d/iptables
+```
+
+### second solution (iptables-persistent package)
+
+[Ref](https://www.cyberciti.biz/faq/how-to-save-iptables-firewall-rules-permanently-on-linux/)
+
+## DNAT and SNAT
+
+[Examples](https://gist.github.com/tomasinouk/eec152019311b09905cd)
+
+## route each traffic with specefic IP to the outside
+
+This can be done using changing IP headers with `SNAT`:
+
+```bash
+iptables -t nat -I POSTROUTING 1 -s 172.18.0.1 -j SNAT --to-source 192.168.1.101
+```
+
+[Ref](https://docs.docker.com/network/packet-filtering-firewalls/)
+[Ref1](https://serverfault.com/questions/762492/route-outgoing-connections-from-a-docker-container-through-a-specific-ip)
+[Ref2](https://forums.docker.com/t/using-secondery-ip-for-docker/93485/3)

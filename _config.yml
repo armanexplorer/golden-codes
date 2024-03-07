@@ -300,3 +300,9 @@ collections:
   mc:
     output: true
     permalink: /:collection/:name
+  github_actions:
+    output: true
+    permalink: /:collection/:name
+  crontab:
+    output: true
+    permalink: /:collection/:name

@@ -11,14 +11,15 @@ title: test mail server is good enough
 [Good Mail Test Result](https://www.mail-tester.com/test-nrzjf1e1s)
 
 [Google Postmaster Tools](https://postmaster.google.com/managedomains)
+
 - provide some info about the ip popularity and spam rate
 
 [Make Your Email Whitelist](https://www.dnswl.org/selfservice/?action=register)
 
 [MimeCast dkim check](https://www.mimecast.com/products/dmarc-analyzer/dkim-check/)
 
+## Spam check
 
-# Spam check
 [**ref**](https://kickbox.com/email-spam-tester/)
 [ref](https://www.experte.com/spam-checker)
 [ref](https://cleantalk.org/email-checker)

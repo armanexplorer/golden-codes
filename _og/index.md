@@ -1,9 +1,11 @@
 ---
+title: all about using og tags for SEO
 ---
 
-# update in telegrma
+## update in telegrma
+
 [link](https://stackoverflow.com/questions/35268940/how-to-force-telegram-to-update-the-link-preview)
 
+## check
 
-# check 
-https://dnschecker.org/open-graph-preview-generate-metatags.php
+[Link](https://dnschecker.org/open-graph-preview-generate-metatags.php)
