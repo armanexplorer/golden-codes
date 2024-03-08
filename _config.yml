@@ -306,3 +306,15 @@ collections:
   crontab:
     output: true
     permalink: /:collection/:name
+  dhcpclient:
+    output: true
+    permalink: /:collection/:name
+  resolved:
+    output: true
+    permalink: /:collection/:name
+  BIND:
+    output: true
+    permalink: /:collection/:name
+  resolver:
+    output: true
+    permalink: /:collection/:name
