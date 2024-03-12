@@ -14,3 +14,5 @@ title: all about the resolv.conf file in linux
 [prevent-edit](https://askubuntu.com/questions/1031279/18-04-bionic-beaver-enforce-static-etc-resolv-conf/1031314#1031314)
 
 [prevent-edit-on-dhcp-client](https://unix.stackexchange.com/questions/174349/what-overwrites-etc-resolv-conf-on-every-boot)
+
+[GOOD](https://unix.stackexchange.com/questions/328131/how-to-troubleshoot-dns-with-systemd-resolved)
