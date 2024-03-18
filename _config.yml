@@ -318,3 +318,6 @@ collections:
   resolver:
     output: true
     permalink: /:collection/:name
+  patterns:
+    output: true
+    permalink: /:collection/:name
