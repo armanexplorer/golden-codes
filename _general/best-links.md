@@ -29,3 +29,7 @@ title: useful links in different subjects
 ## how to choose license
 
 [Ref](https://choosealicense.com/)
+
+## build and auto deploy data apps
+
+[Link](https://streamlit.io/)

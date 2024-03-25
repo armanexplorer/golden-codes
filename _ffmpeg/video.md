@@ -2,7 +2,7 @@
 title: how to convert and edit videos
 ---
 
-# convert webm to mp4
+## convert webm to mp4
 
 It will convert to 128kb/s
 
@@ -10,9 +10,10 @@ It will convert to 128kb/s
 ffmpeg -i input.webm -c:v libx264 -preset slow -crf 22 -c:a aac -b:a 128k output.mp4
 ```
 
-# remove from the middle
+## remove from the middle
 
-## Method1 (worked!)
+### Method1 (worked!)
+
 [Ref](https://stackoverflow.com/questions/64866231/remove-a-section-from-the-middle-of-a-video-without-concat)
 
 ```bash
@@ -23,7 +24,8 @@ ffmpeg -i input.mp4 \
   output.mp4
 ```
 
-## Method 2 (not tested)
+### Method 2 (not tested)
+
 ```bash
 ffmpeg -i input.mp4 -t "$start_cut_section" -c copy part1.mp4&
 ffmpeg -i input.mp4 -ss "$end_cut_section" -c copy part2.mp4&
@@ -37,6 +39,7 @@ rm filelist;
 
 or
 [Ref](https://askubuntu.com/questions/977162/how-to-remove-a-few-seconds-from-mp4-file-using-ffmpeg)
+
 ```bash
 ffmpeg  -t 00:11:00 -i input.mp4 -map 0 -c copy segment1.mp4
 ffmpeg -ss 00:11:10 -i input.mp4 -map 0 -c copy segment2.mp4
@@ -48,7 +51,7 @@ file 'segment2.mp4'
 ffmpeg -f concat -i input.txt -map 0 -c copy output.mp4
 ```
 
-# trim (cut)
+## trim (cut)
 
 ```bash
 # time-based

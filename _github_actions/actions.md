@@ -2,7 +2,7 @@
 title: differnet actions
 ---
 
-## create-release (deprecated)
+## create-release (DEPRECATED)
 
 [Docs](https://github.com/actions/create-release)
 

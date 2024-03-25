@@ -321,3 +321,6 @@ collections:
   patterns:
     output: true
     permalink: /:collection/:name
+  api_client:
+    output: true
+    permalink: /:collection/:name
