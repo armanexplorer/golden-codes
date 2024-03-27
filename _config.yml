@@ -324,3 +324,6 @@ collections:
   api_client:
     output: true
     permalink: /:collection/:name
+  business_intelligence:
+    output: true
+    permalink: /:collection/:name

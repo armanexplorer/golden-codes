@@ -1,4 +1,5 @@
 ---
+title: analyze queries in postgresql
 ---
 
 
