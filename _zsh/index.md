@@ -1,14 +1,19 @@
 ---
+title: all about omz
 ---
 
-# all about prompt
+## all about prompt
+
 [Ref](https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html)
 
-# color names
+## color names
+
 Named colors: `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`, and `default`.
 
-# installation commends
+## installation commends
+
 [Link](https://github.com/reconfigurable-ml-pipeline/infrastructure/blob/master/hack/zsh.sh)
+
 ```bash
 sudo apt update
 sudo apt install -y zsh

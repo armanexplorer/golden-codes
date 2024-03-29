@@ -4,7 +4,7 @@ theme: jekyll-theme-hacker
 markdown: GFM
 
 title: Golden Codes - armanexplorer planet
-description: You will find practical code snippets of Git, Django, Python and others here
+description: Practical code snippets for Django, Python, Bash, Git and All!
 
 
 exclude:

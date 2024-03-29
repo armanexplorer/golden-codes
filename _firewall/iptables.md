@@ -129,7 +129,7 @@ Options:
 [!] --version   -V              print package version.
 ```
 
-## persistant
+## make rules persistent
 
 [Docs](https://wiki.debian.org/iptables)
 
@@ -154,12 +154,37 @@ chmod +x /etc/network/if-pre-up.d/iptables
 
 ## route each traffic with specefic IP to the outside
 
+[Ref1](https://www.reddit.com/r/docker/comments/qld301/binding_specific_outbound_ip_address_to_docker/)
+[Ref2](https://serverfault.com/questions/762492/route-outgoing-connections-from-a-docker-container-through-a-specific-ip)
+[Ref3](https://forums.docker.com/t/using-secondery-ip-for-docker/93485/3)
+[Some Interesting Logs](https://serverfault.com/questions/1108123/docker-containers-with-public-ips-bridged-network)
+
 This can be done using changing IP headers with `SNAT`:
 
 ```bash
 iptables -t nat -I POSTROUTING 1 -s 172.18.0.1 -j SNAT --to-source 192.168.1.101
 ```
 
-[Ref](https://docs.docker.com/network/packet-filtering-firewalls/)
-[Ref1](https://serverfault.com/questions/762492/route-outgoing-connections-from-a-docker-container-through-a-specific-ip)
-[Ref2](https://forums.docker.com/t/using-secondery-ip-for-docker/93485/3)
+### auto script
+
+```bash
+# enter container name
+echo enter container name
+read container
+
+#  enter outbound ip you want to assign the container
+echo enter outbound nat ip to set
+read nat_ip
+
+# get ip of container and store as $container_ip
+container_ip=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $container)
+
+# add nat rule to postrouting table
+sudo iptables -t nat -I POSTROUTING -p all -s $container_ip/32 -j SNAT --to-source $nat_ip
+
+# or to ignore internal network destinations
+# sudo iptables -t nat -I POSTROUTING -p all -s $container_ip/32 ! -d 172.16.0.0/12 -j SNAT --to-source $nat_ip
+
+# verify rule has been added
+sudo iptables -t nat -v -L POSTROUTING -n --line-number | grep $container_ip
+```

@@ -1,12 +1,14 @@
 ---
+title: basics of systemd
 ---
 
-# Systemd Unit
+## Systemd Unit
+
 [Systemd Unit](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)
 service.service, socket.socket, device.device, mount.mount, automount.automount, swap.swap, target.target, path.path, timer.timer, slice.slice, scope.scope
 
+### Service
 
-## Service
 [Systemd Service](https://www.freedesktop.org/software/systemd/man/systemd.service.html)
 A unit configuration file whose name ends in ".service" encodes information about a process controlled and supervised by systemd.
 

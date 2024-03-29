@@ -9,12 +9,14 @@ title: start with DMS
 DMS_GITHUB_URL="https://raw.githubusercontent.com/docker-mailserver/docker-mailserver/master"
 wget "${DMS_GITHUB_URL}/compose.yaml"
 wget "${DMS_GITHUB_URL}/mailserver.env"
+```
 
-# edit compose.yaml
-- "append '/etc/letsencrypt:/etc/letsencrypt' to the volumes for enabling lets encrypt"
-- "change the hostname to the hostname of mail server (mail.example.com)"
+- edit compose.yaml:
+  - append `/etc/letsencrypt:/etc/letsencrypt` to the volumes for enabling lets encrypt
+  - change the hostname to the hostname of mail server (`mail.example.com`)
 
-# edit mailserver.env (all environments are there)
+- edit `mailserver.env` (all environments are there)
+
 ENABLE_RSPAMD=1
 ENABLE_OPENDKIM=0
 ENABLE_OPENDMARC=0
@@ -24,17 +26,21 @@ ENABLE_SPAMASSASSIN=0
 SSL_TYPE=letsencrypt
 ...
 
-# I also added:
-ENABLE_CLAMAV=1
+You can also add:
+
+ENABLE_CLAMAV=0
 ENABLE_FAIL2BAN=1
 
+**note**: Fail2ban will reduce the spam attacks (brute force) by making the frequent requester IPs ban
+
+```bash
 # run DMS for first time
 docker compose -f compose.yaml up
 
 # create the very first account for dovecot (prompts for password)
 docker exec -ti mailserver setup email add info@example.com
 
-# add alias as it is popular to do this
+# add alias as it is popular to do this (forwards all of postmaster@example.com to admin@example.com)
 docker exec -ti mailserver setup alias add postmaster@example.com admin@example.com
 
 # install local dns (systemd resolve + BIND)

@@ -10,8 +10,10 @@ description: the tricks and best practices in definging SPF records
 
 [](https://www.validity.com/blog/how-to-build-your-spf-record-in-5-simple-steps/)
 
-# format
+## format
+
 An SPF record is a line of plain text that includes a list of tags and values. The tags are called mechanisms. The values are typically IP addresses and domain names.
 
-# what should be in the SPF
+## what should be in the SPF
+
 Your SPF record should include a reference to Google Workspace, and to the domains and IP addresses of all servers or services that send mail for your domain.
