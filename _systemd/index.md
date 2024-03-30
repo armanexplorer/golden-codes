@@ -2,6 +2,10 @@
 title: basics of systemd
 ---
 
+## System and session service manager configuration files
+
+[Docs](https://www.freedesktop.org/software/systemd/man/latest/systemd-system.conf.html)
+
 ## Systemd Unit
 
 [Systemd Unit](https://www.freedesktop.org/software/systemd/man/systemd.unit.html)

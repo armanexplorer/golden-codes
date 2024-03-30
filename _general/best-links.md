@@ -33,3 +33,7 @@ title: useful links in different subjects
 ## build and auto deploy data apps
 
 [Link](https://streamlit.io/)
+
+## host check (info,ping,port,dns)
+
+[Link](https://check-host.net/)
