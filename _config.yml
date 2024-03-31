@@ -333,3 +333,6 @@ collections:
   npp:
     output: true
     permalink: /:collection/:name
+  graphviz:
+    output: true
+    permalink: /:collection/:name
