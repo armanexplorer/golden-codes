@@ -2,6 +2,9 @@
 title: all about socks proxy
 ---
 
+[redsocks](https://github.com/darkk/redsocks)
+[new proxychains](https://github.com/rofl0r/proxychains-ng)
+
 ## systemd service
 
 Create such fullowing systemd service file:

@@ -327,3 +327,9 @@ collections:
   business_intelligence:
     output: true
     permalink: /:collection/:name
+  snap:
+    output: true
+    permalink: /:collection/:name
+  npp:
+    output: true
+    permalink: /:collection/:name

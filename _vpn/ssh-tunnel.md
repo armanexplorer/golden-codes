@@ -4,29 +4,24 @@ title: how to configure vpn
 
 [AUTO SSH VPN](https://github.com/GegeEmbrie/autosshvpn2)
 
-## install bad_vpn script
+## install bad_vpn script (UDPGW)
 
 [Docs](https://gist.github.com/1nikolas/4efbfb6b0d37eba8c9ab471c55f5e892)
 [Manual](https://www.youtube.com/watch?v=52lTdyu7i6c&ab_channel=E404)
 
 ```bash
-cat <<EOF > udpgw.sh
-#!/bin/sh
-OS=\`uname -m\`;
-if [ "\$OS" = "x86_64" ]; then
+OS=`uname -m`;
+if [ "$OS" = "x86_64" ]; then
   sudo wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/daybreakersx/premscript/master/badvpn-udpgw64"
 else
   sudo wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/daybreakersx/premscript/master/badvpn-udpgw"
 fi
+sudo chmod +x /usr/bin/badvpn-udpgw
+
 sudo touch /etc/rc.local
 echo "\nscreen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7303" | sudo tee -a /etc/rc.local
-sudo chmod +x /usr/bin/badvpn-udpgw
+
 sudo screen -AmdS badvpn /usr/bin/badvpn-udpgw --listen-addr 127.0.0.1:7303
-EOF
-
-chmod u+x udpgw.sh
-
-./udpgw.sh
 ```
 
 ## install_kernel script
