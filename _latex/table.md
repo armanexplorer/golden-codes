@@ -1,4 +1,5 @@
 ---
+title: all about tables
 ---
 
 [R1](https://tex.stackexchange.com/questions/169260/latex-tables-text-follows-tables-to-the-next-page)

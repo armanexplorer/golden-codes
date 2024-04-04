@@ -37,3 +37,7 @@ title: useful links in different subjects
 ## host check (info,ping,port,dns)
 
 [Link](https://check-host.net/)
+
+## latex vs markdown for thesis
+
+[Link](https://tex.stackexchange.com/questions/418962/markdown-vs-latex-for-thesis)

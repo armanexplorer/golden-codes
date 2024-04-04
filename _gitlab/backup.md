@@ -6,11 +6,12 @@ title: how to backup gitlab
 
 [Back up and restore](https://docs.gitlab.com/ee/administration/backup_restore/)
 
-# backup command
+## backup command
+
 ```bash
 docker exec -t <container name> gitlab-backup create
 ```
 
-# store configuration files
-backup `/srv/gitlab/config`
+## store configuration files
 
+backup `/srv/gitlab/config`

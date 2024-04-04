@@ -1,4 +1,5 @@
 ---
+title: seminar template for master
 ---
 
 [ref](https://github.com/zarrabi/thesis-template)

@@ -336,3 +336,6 @@ collections:
   graphviz:
     output: true
     permalink: /:collection/:name
+  pandoc:
+    output: true
+    permalink: /:collection/:name
