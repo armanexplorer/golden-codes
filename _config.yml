@@ -339,3 +339,9 @@ collections:
   pandoc:
     output: true
     permalink: /:collection/:name
+  jira:
+    output: true
+    permalink: /:collection/:name
+  css:
+    output: true
+    permalink: /:collection/:name

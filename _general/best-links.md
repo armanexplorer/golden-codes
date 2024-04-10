@@ -41,3 +41,11 @@ title: useful links in different subjects
 ## latex vs markdown for thesis
 
 [Link](https://tex.stackexchange.com/questions/418962/markdown-vs-latex-for-thesis)
+
+## test linux distros
+
+[Link](https://distrosea.com/)
+
+## highoight code
+
+[Carbon](https://carbon.now.sh/)

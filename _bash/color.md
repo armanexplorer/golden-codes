@@ -2,6 +2,8 @@
 title: how make the bash output colorful
 ---
 
+[good package](https://gogh-co.github.io/Gogh/)
+
 [Docs](https://stackabuse.com/how-to-change-the-output-color-of-echo-in-linux/)
 
 [Another Doc](https://ioflood.com/blog/bash-color/)

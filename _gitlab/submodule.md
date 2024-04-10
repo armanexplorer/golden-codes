@@ -3,6 +3,7 @@ title: how you can have a repo which uses submodules
 ---
 
 [Docs](https://docs.gitlab.com/ee/ci/git_submodules.html)
+
 [Docs2](https://docs.gitlab.com/ee/ci/runners/configure_runners.html#rewrite-submodule-urls-to-https)
 
 ## add to the gitlab ci file

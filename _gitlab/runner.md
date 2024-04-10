@@ -1,10 +1,13 @@
 ---
+title: all about working with runners in gitlab ci
 ---
 
-# really good description about runner and worker concepts
+## really good description about runner and worker concepts
+
 [ref](https://stackoverflow.com/questions/54534387/how-gitlab-runner-concurrency-works)
 
-# install GitLab Runner as a conatiner
+## install GitLab Runner as a conatiner
+
 ```bash
 docker run -d --name gitlab-runner --restart always \
   -v /srv/gitlab-runner/config:/etc/gitlab-runner \
@@ -14,26 +17,31 @@ docker run -d --name gitlab-runner --restart always \
 ```
 
 ## Register runner through the gitlab webstie (Recommended)
+
 ```bash
 docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register  --url https://gitlab.eridanus.ir  --token glrt-AuFGxtvgCV9ydFca9jQu
 ```
 
-# Register runner posibbly more interactivey
+## Register runner posibbly more interactivey
+
 ```bash
 docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
 ```
 
-# OTHER THAN DIND SOLUTION (Because exposes the host docker!)
+## OTHER THAN DIND SOLUTION (Because exposes the host docker!)
+
 ```bash
 docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register --docker-image "docker:20.10.16" --docker-volumes /var/run/docker.sock:/var/run/docker.sock
 ```
 
-# config
+## config
+
 [main ref](https://docs.gitlab.com/runner/configuration/advanced-configuration.html)
 
 [autoscale](https://docs.gitlab.com/runner/configuration/autoscale.html)
 
-[ref](https://archives.docs.gitlab.com/16.3/ee/ci/runners/configure_runners.html)
+[ref](https://docs.gitlab.com/ee/ci/runners/configure_runners.html)
 
-# docker image tags
+## docker image tags
+
 [Docker Hub Link](https://hub.docker.com/r/gitlab/gitlab-runner/tags)
