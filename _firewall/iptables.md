@@ -31,6 +31,15 @@ iptables -t mangle
 
 # add as the very first rule
 iptables -I chain_name 1
+
+# show the rules by their number
+iptables -t nat -L --line-numbers
+
+# delete rule by its number (`iptables -D [CHAIN] [LINE_NUMBER]`)
+iptables -t nat -D POSTROUTING 4
+
+# you can also delete by specefing the rule
+iptables -D [CHAIN] [RULE_SPECIFICATION]
 ```
 
 ## docker config
