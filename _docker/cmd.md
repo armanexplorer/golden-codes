@@ -1,8 +1,8 @@
 ---
+title: all about CMD in dockerfile
 ---
 
 [Reference](https://www.baeldung.com/linux/docker-cmd-multiple-commands)
-
 
 ```dockerfile
 CMD ["executable", "param1", "param2"]
