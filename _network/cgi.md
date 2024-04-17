@@ -2,6 +2,10 @@
 title: all about gateway interfaces
 ---
 
+[Best Video of WSGI](https://www.youtube.com/watch?v=WqrCnVAkLIo&ab_channel=PyConCanada)
+
+[Text of above video](https://builtin.com/data-science/wsgi)
+
 ## CGI (Common Gateway Interface)
 
 [WikiPedia](https://en.wikipedia.org/wiki/Common_Gateway_Interface)
