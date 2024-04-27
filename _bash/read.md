@@ -13,3 +13,11 @@ The command `read -n1 -r -p "Press Any Key To Show Commands"` prompts the user t
 - `-p "Press Any Key To Show Commands"`: Displays the specified prompt message to the user.
 
 When this command is executed, it will display the message "Press Any Key To Show Commands", and wait for the user to press any key. Once a key is pressed, the script will continue execution. This can be used to pause script execution until user input is received.
+
+## use `<` operator
+
+The `<` operator is used to read the contents of a file:
+
+```bash
+val="$(< "myfile.txt")"
+```

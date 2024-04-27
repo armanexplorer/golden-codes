@@ -1,34 +1,35 @@
 ---
+title: all about makefiles
 ---
 
-# check makefile is OK
+## check makefile is OK
 
 ```bash
 cat -e -t -v makefile_name
 ```
 
-# vars
+## vars
 
 [Docs](https://www.gnu.org/software/make/manual/html_node/Setting.html)
 [Ref](https://earthly.dev/blog/makefile-variables/)
 
-# Integrate with Bash
+## Integrate with Bash
 
 [Docs](https://www.squash.io/integrating-bash-script-into-makefile-in-linux/)
 
-# special variables
+## special variables
 
 [Docs](https://www.gnu.org/software/make/manual/html_node/Special-Variables.html)
 
-# run bash script
+## run bash script
 
 [Ref](https://stackoverflow.com/questions/2497675/how-to-run-a-bash-script-from-a-makefile)
 
-# temp var
+## temp var
 
 [Ref](https://stackoverflow.com/questions/1909188/define-make-variable-at-rule-execution-time)
 
-## run in one shell solution
+### run in one shell solution
 
 ```makefile
 out.tar:
@@ -39,15 +40,15 @@ out.tar:
    rm -rf $$TMP ;\
 ```
 
-## use separate lines
+### use separate lines
 
 ```makefile
 get-backup-dir: TEMP = $(shell find "$(BACKUP_DIR)" -maxdepth 1 -type d -printf '%p\n' | sort -r | head -n1)
 get-backup-dir: ## print that last backup dir
-	@echo "The relative path is:\n $(TEMP)"
+ @echo "The relative path is:\n $(TEMP)"
 ```
 
-## using eavl
+### using eavl
 
 ```makefile
 out.tar :
@@ -57,21 +58,21 @@ out.tar :
     rm -rf $(TMP)
 ```
 
-# call another target with arg
+## call another target with arg
 
 ```makefile
 .PHONY: callee
 callee:
-	@echo $(XYZ)
+ @echo $(XYZ)
 
 .PHONY: caller
 caller: XYZ = 2
 caller: a
 caller:
-	@echo 'test'
+ @echo 'test'
 ```
 
-# if empty
+## if empty
 
 ```makefile
     ifeq ($(a),)
@@ -81,7 +82,7 @@ caller:
     endif
 ```
 
-# multiprocess jobs
+## multiprocess jobs
 
 [Docs](https://www.ibm.com/docs/en/aix/7.3?topic=command-using-make-in-parallel-run-mode)
 

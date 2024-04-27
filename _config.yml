@@ -345,3 +345,9 @@ collections:
   css:
     output: true
     permalink: /:collection/:name
+  api_mock:
+    output: true
+    permalink: /:collection/:name
+  OSRM:
+    output: true
+    permalink: /:collection/:name

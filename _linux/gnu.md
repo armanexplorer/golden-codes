@@ -9,4 +9,4 @@ title: GNU is what you need
 
 ## open the extensions
 
-search `extensions` and open it! (in debian 12 there is no extensions tab in `Tweak`)
+On Debian desktop, search `extensions` and open it! (in debian 12 there is no extensions tab in `Tweak`)
