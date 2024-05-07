@@ -1,8 +1,9 @@
 ---
+title: how can I test emails in GitLab
 ---
 
+## config SMTP
 
-# config SMTP
 ```bash
 # edit gitlab.rb smtp configs accordingly
 ...

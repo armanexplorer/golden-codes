@@ -351,3 +351,15 @@ collections:
   OSRM:
     output: true
     permalink: /:collection/:name
+  scrcpy:
+    output: true
+    permalink: /:collection/:name
+  electricSQL:
+    output: true
+    permalink: /:collection/:name
+  clickhouse:
+    output: true
+    permalink: /:collection/:name
+  firefox:
+    output: true
+    permalink: /:collection/:name

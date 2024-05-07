@@ -1,9 +1,9 @@
 ---
-title: Gitlab API
+title: all about Gitlab API
 ---
 
+## copy all envs and variables
 
-# copy all envs and variables
 ```bash
 # Get the list of environments and variables from the source project
 SOURCE_PROJECT_ID=18
@@ -21,5 +21,35 @@ echo "$ENVIRONMENTS" | jq -c '.[]' | while read environment; do
 done
 echo "$VARIABLES" | jq -c '.[]' | while read variable; do
   curl --header "PRIVATE-TOKEN: $TARGET_ACCESS_TOKEN" --header "Content-Type: application/json" --data "$variable" "https://gitlab.eridanus.ir/api/v4/projects/$TARGET_PROJECT_ID/variables"
+done
+```
+
+## get members of a group projects
+
+```bash
+#!/bin/bash
+
+# Set your GitLab API token and group ID
+GITLAB_API_TOKEN="YOUR_PERSONAL_ACCESS_TOKEN"
+GROUP_ID="YOUR_GROUP_ID"
+GITLAB_API_BASE_URL="https://gitlab.eridanus.ir/api/v4"
+
+# Function to get all projects within a group
+get_projects() {
+    curl -s --header "PRIVATE-TOKEN: $GITLAB_API_TOKEN" "$GITLAB_API_BASE_URL/groups/$GROUP_ID/projects" | jq -r '.[].id'
+}
+
+# Function to get members of a project
+get_project_members() {
+    project_id=$1
+    curl -s --header "PRIVATE-TOKEN: $GITLAB_API_TOKEN" "$GITLAB_API_BASE_URL/projects/$project_id/members" | jq '.[].username'
+}
+
+# Iterate through projects and list their members
+for project_id in $(get_projects); do
+    project_name=$(curl -s --header "PRIVATE-TOKEN: $GITLAB_API_TOKEN" "$GITLAB_API_BASE_URL/projects/$project_id" | jq -r '.name')
+    echo "Members of Project: $project_name"
+    get_project_members $project_id
+    echo "--------------------------------------"
 done
 ```

@@ -53,3 +53,15 @@ title: useful links in different subjects
 ## dockerfile linter (prettifier,formatter)
 
 [Hadolint](https://hadolint.github.io/hadolint/)
+
+## jira,Notion stack replacement
+
+[Huly](https://github.com/hcengineering)
+
+[Huly Platform](https://github.com/hcengineering/platform)
+
+[Hully Self-host](https://github.com/hcengineering/huly-selfhost)
+
+## play with docker
+
+[play-with-docker](https://labs.play-with-docker.com/)

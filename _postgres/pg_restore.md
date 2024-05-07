@@ -60,18 +60,18 @@ Only the `custom` and `directory` archive formats are supported with this option
 
 ```bash
 # simple
-$ pg_dump -Fc mydb > db.dump
+pg_dump -Fc mydb > db.dump
 
 # existing db
-$ dropdb mydb
-$ pg_restore -C -d postgres db.dump
+dropdb mydb
+pg_restore -C -d postgres db.dump
 
 # create and load into new db
-$ createdb -T template0 newdb
-$ pg_restore -d newdb db.dump
+createdb -T template0 newdb
+pg_restore -d newdb db.dump
 
 # select only some db itmes to restore
-$ pg_restore -l db.dump > db.list
-$ nano db.list # make change to only choose some of itmes
-$ pg_restore -L db.list db.dump
+pg_restore -l db.dump > db.list
+nano db.list # make change to only choose some of itmes
+pg_restore -L db.list db.dump
 ```
