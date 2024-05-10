@@ -65,3 +65,7 @@ title: useful links in different subjects
 ## play with docker
 
 [play-with-docker](https://labs.play-with-docker.com/)
+
+## word counter
+
+[laptoprev](https://laptoprev.xyz/)
