@@ -363,3 +363,6 @@ collections:
   firefox:
     output: true
     permalink: /:collection/:name
+  pycharm:
+    output: true
+    permalink: /:collection/:name
