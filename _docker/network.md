@@ -43,7 +43,7 @@ Using Macvlan in Docker allows you to assign static IP addresses to containers, 
 
 In summary, Macvlan is a network driver in Docker that enables containers to have their own MAC and IP addresses, making them appear as individual devices on the network. This feature can be utilized to assign static IP addresses to containers, ensuring stable network configurations within a Docker environment.
 
-[Great Exmaple](https://stackoverflow.com/questions/76875581/docker-compose-use-ipvlan-with-static-address-for-a-dhcp-server)
+[Great Exmaple of Question](https://stackoverflow.com/questions/76875581/docker-compose-use-ipvlan-with-static-address-for-a-dhcp-server)
 
 [Question-Answer Link](https://forums.docker.com/t/how-do-i-attach-a-macvlan-network-and-assign-a-static-ip-address-in-compose-file/107419)
 

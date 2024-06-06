@@ -15,5 +15,5 @@ telnet smtp.gmail.com 587 # (or 25 or 465)
 ## check the smtp works on STARTTLS
 
 ```bash
-openssl s_client -starttls smtp -connect mail.tokenision.com:587 # (or 25 or 465)
+openssl s_client -starttls smtp -connect mail.example.com:587 # (or 25 or 465)
 ```

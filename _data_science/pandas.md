@@ -46,3 +46,7 @@ df = df.iloc[(df['a']* df['b']).sort_values().index]
 ## Cookbook
 
 [Ref](https://pandas.pydata.org/docs/user_guide/cookbook.html)
+
+## read json
+
+[Docs](https://pandas.pydata.org/docs/reference/api/pandas.read_json.html)

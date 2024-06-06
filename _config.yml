@@ -366,3 +366,9 @@ collections:
   pycharm:
     output: true
     permalink: /:collection/:name
+  unicode:
+    output: true
+    permalink: /:collection/:name
+  mailgun:
+    output: true
+    permalink: /:collection/:name

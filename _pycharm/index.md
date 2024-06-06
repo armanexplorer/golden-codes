@@ -20,7 +20,7 @@ Download the tar.gz file from [here](https://www.jetbrains.com/pycharm/download/
 
 ### Extract
 
-Extract to `/opt` (as recommended by Linux FHS):
+Extract to `/opt` (as recommended by Linux FHS) like [here](https://www.jetbrains.com/help/pycharm/installation-guide.html#standalone):
 
 ```bash
 sudo tar xzf pycharm-*.tar.gz -C /opt/

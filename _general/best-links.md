@@ -69,3 +69,7 @@ title: useful links in different subjects
 ## word counter
 
 [laptoprev](https://laptoprev.xyz/)
+
+## changelog generator
+
+[towncrier](https://pypi.org/project/towncrier/)
