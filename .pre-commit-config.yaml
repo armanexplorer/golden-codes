@@ -20,4 +20,4 @@ repos:
         name: Add frontier and update collections
         entry: bash trim-md-files.sh
         language: system
-        files: \.(yaml|yml|md)$
+        files: \.(yaml|yml|md|sh)$
