@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-# First of all, clone the repository and set the branch to v2.   
+# First of all, clone the repository and set the branch to v2.
 
 git clone --single-branch --branch v2 https://github.com/SeldonIO/seldon-core.git
 
@@ -17,7 +17,7 @@ microk8s enable dns storage
 # https://github.com/SeldonIO/seldon-core.git
 
 
-kubectl get crds | grep kafka 
+kubectl get crds | grep kafka
 
 kubectl create namespace kafka
 
@@ -31,8 +31,8 @@ kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-ephemeral.yaml -
 kubectl get pods -n kafka
 
 # And it should be like this:
-   
-   
+
+
    NAME                                          READY   STATUS    RESTARTS      AGE
 my-cluster-entity-operator-7dfb85ccf9-28dqd   3/3     Running   0             95s
 my-cluster-kafka-0                            1/1     Running   0             118s
@@ -42,10 +42,10 @@ my-cluster-zookeeper-0                        1/1     Running   0             2m
 my-cluster-zookeeper-1                        1/1     Running   0             2m21s
 my-cluster-zookeeper-2                        1/1     Running   0             2m21s
 strimzi-cluster-operator-f696c85f7-9fggx      1/1     Running   0             7m49s
-   
-   
+
+
 # After that, you need to install seldon v2:
-   
+
 cd seldon-core
 
 helm install seldon-core-v2-crds  k8s/helm-charts/seldon-core-v2-crds
@@ -60,7 +60,7 @@ kubectl create namespace seldon-mesh
 
 helm install seldon-core-v2  k8s/helm-charts/seldon-core-v2-setup --namespace seldon-mesh
 
-   
+
 
 
 helm install seldon-v2-servers k8s/helm-charts/seldon-core-v2-servers --namespace seldon-mesh

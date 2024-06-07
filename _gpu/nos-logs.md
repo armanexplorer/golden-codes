@@ -23,7 +23,7 @@ kubectl logs -f pod/nvidia-device-plugin-nebuly-xsf6k -n nebuly-nvidia -c nvidia
 ## device plugin sidecar
 
 ```bash
-kubectl logs -f pod/nvidia-device-plugin-nebuly-xsf6k -n nebuly-nvidia -c nvidia-device-plugin-sidecar 
+kubectl logs -f pod/nvidia-device-plugin-nebuly-xsf6k -n nebuly-nvidia -c nvidia-device-plugin-sidecar
 ```
 
 ## init container: set compute mode
@@ -41,5 +41,5 @@ kubectl logs -f pod/nvidia-device-plugin-nebuly-xsf6k -n nebuly-nvidia -c set-nv
 ## init container: device plugin init
 
 ```bash
-kubectl logs -f pod/nvidia-device-plugin-nebuly-xsf6k -n nebuly-nvidia -c nvidia-device-plugin-init 
+kubectl logs -f pod/nvidia-device-plugin-nebuly-xsf6k -n nebuly-nvidia -c nvidia-device-plugin-init
 ```

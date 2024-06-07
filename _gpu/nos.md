@@ -95,7 +95,7 @@ kubectl label nodes arman-gpu "nos.nebuly.com/gpu-partitioning=mps"
 ### NOTE: ONLY run it if the plugin FAILED TO UP
 
 ```bash
-kubectl label node arman-gpu nvidia.com/device-plugin.config- 
+kubectl label node arman-gpu nvidia.com/device-plugin.config-
 ```
 
 ### install plugin
@@ -176,7 +176,7 @@ kubectl logs -n nebuly-nvidia -l app.kubernetes.io/name=nebuly-nvidia-device-plu
 kubectl logs -n nebuly-nvidia -l app.kubernetes.io/name=nebuly-nvidia-device-plugin -f -c nvidia-mps-server
 
 spw
-# or 
+# or
 watch -n 1 kubectl get all
 ```
 
@@ -203,7 +203,7 @@ Full Error Message:
 
 ```log
 msg="Label change detected: nvidia.com/device-plugin.config=arman-gpu-1707430327"
-time="2024-02-09T16:25:33Z" 
+time="2024-02-09T16:25:33Z"
 level=info msg="Error: specified config arman-gpu-1707430327 does not exist"
 Error from server (BadRequest): container "nvidia-device-plugin-sidecar" in pod "nvidia-device-plugin-nebu
 ```

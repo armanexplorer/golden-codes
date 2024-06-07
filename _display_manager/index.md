@@ -14,7 +14,7 @@ This installs with KDE-Plasma
 
 ```bash
 # Note: this will throw some error but after reboot everything should be OK
-sudo dpkg-reconfigure gdm3 
+sudo dpkg-reconfigure gdm3
 
 sudo reboot
 ```

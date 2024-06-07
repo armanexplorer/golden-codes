@@ -8,4 +8,3 @@
 ```bash
 curl -ivv https://example.com
 ```'
-

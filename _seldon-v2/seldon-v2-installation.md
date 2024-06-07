@@ -161,7 +161,7 @@ strimzi-cluster-operator-566948f58c-lthbs   1/1     Running   0             11h
 [deprecated Link](https://docs.seldon.io/projects/seldon-core/en/v2.4.0/contents/getting-started/kubernetes-installation/helm.html)
 
 ```bash
-microk8s enable dns storage observability 
+microk8s enable dns storage observability
 
 # to dedicate external ip to the `seldon-scheduler` and `seldon-mesh`
 microk8s enable metallb

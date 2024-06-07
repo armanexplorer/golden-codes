@@ -8,7 +8,7 @@ description: s3cmd commands
 [Parspack Manual](https://parspack.com/blog/hosting/connect-cloud-storage-s3cmd)
 
 ```bash
-# install 
+# install
 apt-get update && apt-get install s3cmd
 
 # configure
@@ -16,10 +16,10 @@ s3cmd --configure
 
 # ---
 # host_base: will be used to list the buckets (access the root of buckets)
-# host_bucket: will be used as a DNS-style template to access a bucket 
+# host_bucket: will be used as a DNS-style template to access a bucket
 # ---
 
-# list of buckets 
+# list of buckets
 s3cmd ls …
 
 # list the contents of a bucket

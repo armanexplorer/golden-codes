@@ -2,8 +2,13 @@
 title: all about network interface
 ---
 
+## temp add ip
 
-## add ip to interafce
+```bash
+sudo ip addr add x.y.z.w dev eth0
+```
+
+## add ip permenently to interafce
 
 **Note**: In the `/etc/network/interfaces.d/`, the first files in alphabetic order have more priority. Usually, the default interface file there will start with `50-`. So you can use `40` for more priority config and `60` for low priority ones.
 

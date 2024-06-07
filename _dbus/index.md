@@ -1,6 +1,6 @@
 ---
 title: DBus
-description: 
+description:
 ---
 
 # basics

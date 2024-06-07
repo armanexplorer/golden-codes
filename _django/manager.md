@@ -6,7 +6,7 @@ description: An intro to Base Manager and its interesting attributes
 
 # Intro
 This code snippet will add intended (public and not queryset only) queryset methods to the current manager on the fly.
-    
+
 ## `_get_queryset_methods`
 Creates the custom methods originated from the `QuerySet` class, then put them with their names as keys in a dictionary.
 
@@ -17,7 +17,7 @@ Creates a new manager class using `type` with the base class of `cls` (BaseManag
 import inspect
 
 class BaseManager:
-    
+
     ...
 
     @classmethod
@@ -25,7 +25,7 @@ class BaseManager:
         def create_method(name, method):
             def manager_method(self, *args, **kwargs):
                 # INFO: The ``self`` here will be refrenced to the created manager class to
-                # be able to call ``get_queryset()`` JUST IN TIME (like lazy stuff) 
+                # be able to call ``get_queryset()`` JUST IN TIME (like lazy stuff)
                 return getattr(self.get_queryset(), name)(*args, **kwargs)
             manager_method.__name__ = method.__name__
             manager_method.__doc__ = method.__doc__
@@ -52,6 +52,6 @@ class BaseManager:
             '_queryset_class': queryset_class,
             **cls._get_queryset_methods(queryset_class),
         })
-        
+
     ...
 ```

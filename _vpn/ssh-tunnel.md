@@ -1,5 +1,5 @@
 ---
-title: how to configure vpn 
+title: how to configure vpn
 ---
 
 [AUTO SSH VPN](https://github.com/GegeEmbrie/autosshvpn2)

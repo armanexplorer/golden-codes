@@ -30,11 +30,11 @@ class Script {
       // request.user.username
       // request.content_raw
       // request.content
-  
+
       // console is a global helper to improve debug
       console.log(request.content);
       console.log(request.content.attachments);
-  
+
       return {
         content:{
           emoji: request.content.emoji,
@@ -42,7 +42,7 @@ class Script {
           "attachments": request.content.attachments
          }
       };
-  
+
       // return {
       //   error: {
       //     success: false,

@@ -3,6 +3,10 @@ title: Adding ssh key to the ssh-agent
 description: If you want to only enter your ssh password one time, ues ssh-agent
 ---
 
+## gnome ssh agent
+
+[Ref](https://unix.stackexchange.com/questions/424520/how-is-my-ssh-key-unlocked-without-ssh-agent-and-how-do-i-fix-that)
+
 ## add key
 
 Run `ssh-add` on the client machine, that will add the SSH key to the agent.

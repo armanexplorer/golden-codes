@@ -1,5 +1,5 @@
 ---
-title: ‌how to work with Pycharm Editors 
+title: ‌how to work with Pycharm Editors
 ---
 
 ## install Pycharm Professional

@@ -25,7 +25,7 @@ try:
         current_count = 0
     else:
         current_count = int(current_count)
-    
+
     new_count = current_count + 1
     r.set('my_counter', new_count)
 finally:

@@ -1,6 +1,6 @@
 SELDON_NAMESPACE ?= seldon-mesh
 SELDON_WORKING_DIR ?= $(shell pwd)/seldon-core
-SELDON_VERSION ?= 
+SELDON_VERSION ?=
 
 SELDON_KUBECTL_NAMESPACE := --namespace $(SELDON_NAMESPACE)
 
@@ -30,12 +30,12 @@ install-seldon-core-v2: uninstall-seldon-core-v2 install-kafka ## uninstall the 
 
 	# install crds
 	$(HELM) upgrade --install seldon-core-v2-crds seldon-charts/seldon-core-v2-crds
-	
+
 	# check the crds are up
 	sleep 1
 	$(KUBECTL) wait --for condition=established --timeout=60s crd/servers.mlops.seldon.io
 	$(KUBECTL) wait --for condition=established --timeout=60s crd/serverconfigs.mlops.seldon.io
-	
+
 	# create namespace
 	$(KUBECTL) create namespace $(SELDON_NAMESPACE) || echo "namespace already existing"
 
@@ -62,10 +62,10 @@ uninstall-seldon-v2-core: ## Uninstall the old seldon-v2
 .PHONY: install-kafka
 install-kafka: uninstall-kafka-dev uninstall-kafka ## Install the kafka using strimzi
 	$(KUBECTL) delete all --all $(SELDON_KUBECTL_NAMESPACE)
-	
+
 	$(KUBECTL) apply -f https://strimzi.io/install/latest?namespace=$(SELDON_NAMESPACE) \
 		$(SELDON_KUBECTL_NAMESPACE)
-	
+
 	# TODO: wget the https://strimzi.io/examples/latest/kafka/kafka-ephemeral.yaml and then
 	# change the name to 'seldon'
 	$(KUBECTL) apply -f kafka.yaml $(SELDON_KUBECTL_NAMESPACE)

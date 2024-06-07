@@ -22,6 +22,3 @@ let find = ['%Y', '%y', '%MM', '%mm', '%M', '%m', '%D', '%d', '%WW', '%ww', '%w'
 | `%WW` | Day of the week | `چهارشنبه` |
 | `%ww` | Day of the week (short) | `چهار` |
 | `%w` | Day of the week (very short) | `چ` |
-
-
-

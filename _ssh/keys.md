@@ -2,6 +2,8 @@
 title: all about ssh keys
 ---
 
+[Docs](https://www.baeldung.com/linux/ssh-key-types-convert-ppk)
+
 ## convert PuTTY .ppk keys to OpenSSH format
 
 [Link](https://megamorf.gitlab.io/2020/05/06/how-to-convert-putty-ppk-key-to-openssh-format/)

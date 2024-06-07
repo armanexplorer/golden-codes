@@ -1,5 +1,5 @@
 ---
-title: what is select_for_update 
+title: what is select_for_update
 ---
 
 Returns a queryset that will lock rows until the end of the transaction, generating a `SELECT ... FOR UPDATE SQL` statement on supported databases.

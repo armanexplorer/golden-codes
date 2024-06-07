@@ -46,5 +46,5 @@ microk8s enable gpu --values values.yaml
 ## test mnicrok8s config
 
 ```bash
-microk8s enable gpu --driver operator --version 22.9.0 --values values.yaml 
+microk8s enable gpu --driver operator --version 22.9.0 --values values.yaml
 ```

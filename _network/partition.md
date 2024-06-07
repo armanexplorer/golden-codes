@@ -1,5 +1,5 @@
 ---
-title: what is network partition? 
+title: what is network partition?
 ---
 
 

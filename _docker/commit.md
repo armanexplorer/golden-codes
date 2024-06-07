@@ -11,7 +11,7 @@ touch /TEST
 
 exit
 
-# create an image from the last conatiner created   
+# create an image from the last conatiner created
 docker commit $(docker ps -lq) test-image
 
 # deploy it to registry

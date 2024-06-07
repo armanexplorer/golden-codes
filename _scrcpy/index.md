@@ -1,5 +1,5 @@
 ---
-title: Scrcpy: mirror android devices on computers 
+title: Scrcpy: mirror android devices on computers
 ---
 
 [Repo Link](https://github.com/Genymobile/scrcpy)

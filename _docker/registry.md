@@ -1,6 +1,6 @@
 ---
-title: docker registry install and configurations 
-description: 
+title: docker registry install and configurations
+description:
 ---
 
 [Configs](https://gdevillele.github.io/registry/configuration/)

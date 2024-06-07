@@ -4,6 +4,8 @@ title: some hacks in pandas
 
 ## group_by
 
+[Docs](https://www.datacamp.com/tutorial/pandas-split-apply-combine-groupby)
+
 Get the first column of each group:
 
 ```py
@@ -50,3 +52,11 @@ df = df.iloc[(df['a']* df['b']).sort_values().index]
 ## read json
 
 [Docs](https://pandas.pydata.org/docs/reference/api/pandas.read_json.html)
+
+## multi-index
+
+[Docs](https://www.datacamp.com/tutorial/pandas-multi-index)
+
+## importing data into dataframes
+
+[Docs](https://www.datacamp.com/tutorial/importing-data-into-pandas)

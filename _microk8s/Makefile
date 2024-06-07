@@ -62,5 +62,3 @@ install-microk8s:
     else \
         echo "\n\033[1;32mAliases already exists in .bash_aliases\033[0m\n"; \
     fi
-
-

@@ -61,7 +61,7 @@ kubectl replace --raw "/apis/mlops.seldon.io/v1alpha1/namespaces/seldon-mesh/ser
 
 # delete namespace
 ```bash
-kubectl delete namespace seldon-mesh 
+kubectl delete namespace seldon-mesh
 kubectl delete namespace seldon-mesh  --grace-period=0 --force
 ```
 
@@ -185,9 +185,9 @@ seldon pipeline unload -f pipelines/trigger-joins.yaml
 
 config.tracingConfig.disable=true
 
-helm upgrade seldon-core-v2 seldon-charts/seldon-core-v2-setup -n seldon-mesh --set opentelemetry.disable=true 
+helm upgrade seldon-core-v2 seldon-charts/seldon-core-v2-setup -n seldon-mesh --set opentelemetry.disable=true
 
-helm upgrade seldon-core-v2 seldon-charts/seldon-core-v2-setup -n seldon-mesh --set kafka.bootstrap=seldon-kafka-bootstrap.kafka:9092 
+helm upgrade seldon-core-v2 seldon-charts/seldon-core-v2-setup -n seldon-mesh --set kafka.bootstrap=seldon-kafka-bootstrap.kafka:9092
 
 helm upgrade seldon-v2-runtime seldon-charts/seldon-core-v2-runtime -n seldon-mesh --set config.tracingConfig.disable=true
 

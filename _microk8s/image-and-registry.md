@@ -10,7 +10,7 @@ title: images and registry
 
 ```bash
 # list cached images by microk8s
-microk8s ctr images ls 
+microk8s ctr images ls
 # or
 microk8s.ctr images ls
 

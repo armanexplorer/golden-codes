@@ -121,7 +121,7 @@ do
   docker exec -t $container bash -c 'pg_dump -U $POSTGRES_USER -d $POSTGRES_DB --clean' > /opt/backups/pg_dumps/pg_dump-$container.sql;
 done
 ```
-# mirage 
+# mirage
 
 # move grafana data
 - move `grafana.db` of its volume (or inside the continaer) to new server

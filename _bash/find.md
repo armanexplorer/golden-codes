@@ -4,7 +4,7 @@ description: some really practical commands with `find`
 ---
 
 ```bash
-#‌ check the files in the current directory which have been changed in last 3 days 
+#‌ check the files in the current directory which have been changed in last 3 days
 find . -mtime -3
 ```
 

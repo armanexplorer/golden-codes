@@ -73,3 +73,7 @@ title: useful links in different subjects
 ## changelog generator
 
 [towncrier](https://pypi.org/project/towncrier/)
+
+## regex test
+
+[regex101](https://regex101.com/)

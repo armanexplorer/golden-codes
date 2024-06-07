@@ -1,5 +1,5 @@
 ---
-title: MinIO Client 
+title: MinIO Client
 ---
 
 # set alias
@@ -11,7 +11,7 @@ mc alias set minio http://localhost:31900 "$ACCESS_KEY" "$SECRET_KEY" --api s3v4
 ```bash
 mc alias list
 ```
-# see the buckets in minio 
+# see the buckets in minio
 ```bash
 mc ls minio
 ```

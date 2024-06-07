@@ -20,8 +20,8 @@ To make the RTL languages ot start from right  to left, add the following script
 
 ```js
 function setAutoDir(){
-    $("div.rcx-message-container[dir!='auto'],div.rcx-message-body[dir!='auto']").attr('dir', 'auto'); 
-    $("textarea.rc-message-box__textarea[dir!='auto']").attr('dir', 'auto'); 
+    $("div.rcx-message-container[dir!='auto'],div.rcx-message-body[dir!='auto']").attr('dir', 'auto');
+    $("textarea.rc-message-box__textarea[dir!='auto']").attr('dir', 'auto');
 }
 setAutoDir();
 var elementCount = $('.rcx-message-body').length;

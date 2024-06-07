@@ -8,7 +8,7 @@ Error:
 AttributeError: module 'lib' has no attribute 'X509_V_FLAG_CB_ISSUER_CHECK'
 
 Solution:
-sudo apt remove python3-pip 
+sudo apt remove python3-pip
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 

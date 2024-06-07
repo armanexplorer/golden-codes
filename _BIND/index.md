@@ -38,11 +38,11 @@ acl allowed_clients {
 };
 options {
     directory "/var/cache/bind";
-    
+
     recursion yes;
-    allow-recursion { allowed_clients; };   
+    allow-recursion { allowed_clients; };
     allow-query { allowed_clients; };
-    listen-on { localhost; };       
+    listen-on { localhost; };
     allow-transfer { none; };
 
     forwarders {

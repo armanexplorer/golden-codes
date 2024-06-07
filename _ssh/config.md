@@ -53,8 +53,7 @@ Host *.*
 ## options
 
 `IdentitiesOnly`
-        Specifies that ssh(1) should only use the configured authentication identity and certificate files (either the default files, or those explicitly configured in the ssh_config files or passed on the ssh(1) command-line), even if ssh-agent(1) or a PKCS11Provider or
-        SecurityKeyProvider offers more identities.  The argument to this keyword must be yes or no (the default).  This option is intended for situations where ssh-agent offers many different identities.
+        Specifies that ssh(1) should only use the configured authentication identity and certificate files (either the default files, or those explicitly configured in the ssh_config files or passed on the ssh(1) command-line), even if ssh-agent(1) or a PKCS11Provider or SecurityKeyProvider offers more identities.  The argument to this keyword must be yes or no (the default).  This option is intended for situations where ssh-agent offers many different identities.
 
 `IdentityAgent`
         Specifies the UNIX-domain socket used to communicate with the authentication agent.
