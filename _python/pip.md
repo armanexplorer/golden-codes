@@ -30,3 +30,30 @@ The main benefits of using `pip install -e` are:
 4. **Avoids conflicts**: Installing packages directly with `pip install` can lead to conflicts if you have multiple projects using different versions of the same package. Using editable installs and virtual environments helps isolate each project's dependencies.
 
 5. **Follows best practices**: The `python -m pip install -e` command is considered a best practice for installing packages during development. It explicitly specifies the Python interpreter to use and avoids potential issues that can arise from relying on the system's default `pip` command.
+
+## install from mirrors
+
+```bash
+pip install --trusted-host https://mirror-pypi.runflare.com -i https://mirror-pypi.runflare.com/simple/ django
+```
+
+```bash
+source host:
+
+https://mirror-pypi.runflare.com
+https://pypi.tuna.tsinghua.edu.cn
+https://mirrors.aliyun.com
+https://pypi.mirrors.ustc.edu.cn
+https://repo.huaweicloud.com
+http://pypi.douban.com
+http://pypi.sdutlinux.org
+source adderess:
+
+https://mirror-pypi.runflare.com/simple/
+https://pypi.tuna.tsinghua.edu.cn/simple/
+https://mirrors.aliyun.com/pypi/simple/
+https://pypi.mirrors.ustc.edu.cn/simple/
+https://repo.huaweicloud.com/repository/pypi/simple/
+http://pypi.douban.com/simple/
+http://pypi.sdutlinux.org/
+```

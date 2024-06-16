@@ -17,3 +17,23 @@
 | `-e`   | Show the most recent journal entries and jump to the end of the log | `--pager-end` |
 | `-u`   | Filter the output by a specific systemd unit | `--unit` |
 | `-x`   | Add more information to the output, including the full message and source file/line number | `--full` |
+
+## filter
+
+[Docs](https://net2.com/how-to-analyze-linux-systemd-logs-using-journalctl-advanced-filtering-options/)
+
+The --since and --until options accept various time formats:
+
+```bash
+journalctl --since "2024-06-12 12:00:00" --until "2024-06-12 14:00:00"
+```
+
+```bash
+journalctl --since "2 hours ago"
+```
+
+Additionally, you can combine these options with other filters like --unit to filter for a specific systemd unit, or -p to filter by log priority level:
+
+```bash
+journalctl --since "1 hour ago" -u sshd -p err
+```

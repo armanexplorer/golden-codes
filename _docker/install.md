@@ -48,3 +48,14 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ## configure root-less docker (security topics)
 
 [Docs](https://docs.docker.com/engine/security/rootless/)
+
+## configure free mirror
+
+Open `/etc/docker/daemon.json` and enter the following there (Only use if you are in force):
+
+
+```json
+{
+  "registry-mirrors": ["https://docker.arvancloud.ir"]
+}
+```

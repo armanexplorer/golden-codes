@@ -28,6 +28,8 @@ title: tools for Git Hooks
 
 [reorder-python-imports](https://github.com/asottile/reorder-python-imports)
 
+[markdownlint](https://github.com/igorshubovych/markdownlint-cli)
+
 ## good samples
 
 [flake sample](https://github.com/PyCQA/flake8/blob/main/.pre-commit-config.yaml)

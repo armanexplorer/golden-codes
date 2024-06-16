@@ -1,8 +1,33 @@
 ---
-
+title: project name in docker compose
 ---
 
-# get the containers of a specefic project
+## how set project name
+
+To determine the project name in a Docker Compose file, you can use one of the following methods:
+
+1. **Using the `-p` Flag**:
+   - Run `docker-compose -p <project_name> up` to specify the project name on the command line.
+
+2. **Using the `COMPOSE_PROJECT_NAME` Environment Variable**:
+   - Set the `COMPOSE_PROJECT_NAME` environment variable before running `docker-compose up`. For example, `export COMPOSE_PROJECT_NAME=<project_name>`.
+
+3. **Using an Environment File**:
+   - Create a `.env` file in the root directory of your project and add the line `COMPOSE_PROJECT_NAME=<project_name>` to it. Then, you can run `docker-compose up` without setting the environment variable explicitly.
+
+4. **Using the `name` Property in the `docker-compose.yml` File**:
+   - As of Docker Compose v2.3.3, you can specify the project name directly in the `docker-compose.yml` file using the `name` property at the top level. For example:
+
+     ```yaml
+     version: '3'
+     name: my-project
+     services:
+       mysql:
+         ...
+     ```
+
+## get the containers of a specefic project
+
 Docker Compose does not provide a direct command to list the current namespaces (project names). However, you can list all running containers and filter them by the project name using the `docker ps` command. The project name is used as a prefix for the container names created by Docker Compose.
 
 To list all running containers and their project names, you can use the following command:
@@ -21,12 +46,4 @@ To filter the containers by a specific project name, you can use the `grep` comm
 docker ps --format '{{.Names}}' | grep '^project1'
 ```
 
-This command will display only the containers with the `project1` prefix, indicating that they belong to the `project1` namespace[1][2][4].
-
-Citations:
-[1] https://stackoverflow.com/questions/70915151/how-to-show-all-running-containers-created-by-docker-compose-globally-regardle
-[2] https://docs.docker.com/engine/reference/commandline/compose_ps/
-[3] https://www.interviewbit.com/docker-interview-questions/
-[4] https://docs.docker.com/engine/reference/commandline/compose_down/
-[5] https://docs.docker.com/compose/compose-file/compose-file-v3/
-[6] https://docs.docker.com/compose/compose-file/compose-file-v2/
+This command will display only the containers with the `project1` prefix, indicating that they belong to the `project1` namespace

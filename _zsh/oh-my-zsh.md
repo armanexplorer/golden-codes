@@ -21,7 +21,7 @@ Add full current directory and time to the prompt
 
 ```bash
 cp $ZSH/themes/$ZSH_THEME.zsh-theme $ZSH_CUSTOM/themes/
-sed -i.bak 's/^PROMPT=.*/PROMPT="%{$fg_bold[green]%}[%*] %(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%~%{$reset_color%}"/' $ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme
+sed -i.bak 's/^PROMPT=.*/PROMPT="%{$fg_bold[magenta]%}[%*] %(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%~%{$reset_color%}"/' $ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme
 
 # replace current shell with new zsh shell
 exec zsh
