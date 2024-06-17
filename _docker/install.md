@@ -4,9 +4,20 @@ title: install docker engine
 
 ## Install Docker CE
 
-[Docker Installation](https://docs.docker.com/engine/install/debian/)
+We have two methods:
+
+### using script
+
+[Docs](https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script)
+
+```bash
+curl -L https://get.docker.com | sh
+```
 
 ### Setup docker apt repository
+
+[Docs](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
+
 
 #### Add Docker's official GPG key
 

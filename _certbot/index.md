@@ -4,6 +4,17 @@ title: how to work with certbot?
 
 [Usage Docs](https://eff-certbot.readthedocs.io/en/latest/using.html)
 
+## install on Debian 12 with nginx
+
+[Link](https://linuxcapable.com/how-to-secure-nginx-with-lets-encrypt-on-debian-linux/)
+
+```bash
+sudo apt update
+sudo apt upgrade
+
+sudo apt install certbot python3-certbot-nginx
+```
+
 ## expand domans of a certificate
 
 Add new domains to an existing certificate

@@ -372,3 +372,6 @@ collections:
   mailgun:
     output: true
     permalink: /:collection/:name
+  sentry:
+    output: true
+    permalink: /:collection/:name
