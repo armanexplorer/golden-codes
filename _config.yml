@@ -375,3 +375,6 @@ collections:
   sentry:
     output: true
     permalink: /:collection/:name
+  storage:
+    output: true
+    permalink: /:collection/:name

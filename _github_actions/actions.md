@@ -22,3 +22,9 @@ Creates a accessable resource with a specefic URL. It will add `artifacts` secto
 [Docs](https://github.com/actions/download-artifact)
 
 Download Actions Artifacts from your Workflow Runs
+
+## tag
+
+[Ref1](https://github.com/mathieudutour/github-tag-action)
+
+[Ref2](https://github.com/anothrNick/github-tag-action)
