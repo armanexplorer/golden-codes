@@ -1,7 +1,9 @@
 ---
+title: all about gitlab-rails command
 ---
 
-# test the mail server
+## test the mail server
+
 ```bash
 gitlab-rails console
 Notify.test_email('recipient@example.com', 'Test Subject', 'Test Body').deliver_now

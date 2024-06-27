@@ -19,7 +19,7 @@ docker run -d --name gitlab-runner --restart always \
 ## Register runner through the gitlab webstie (Recommended)
 
 ```bash
-docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register  --url https://gitlab.eridanus.ir  --token glrt-AuFGxtvgCV9ydFca9jQu
+docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register  --url https://example.com  --token glrt-AuFGxtvgCV9ydFca9jQu
 ```
 
 ## Register runner posibbly more interactivey
@@ -45,3 +45,29 @@ docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitla
 ## docker image tags
 
 [Docker Hub Link](https://hub.docker.com/r/gitlab/gitlab-runner/tags)
+
+## configure registry
+
+### Standard authentication methods
+
+```bash
+[[runners]]
+  environment = ["DOCKER_AUTH_CONFIG={\"auths\":{\"registry.example.com:5000\":{\"auth\":\"bXlfdXNlcm5hbWU6bXlfcGFzc3dvcmQ=\"}}}"]
+
+```
+
+### Docker-in-Docker Mode
+
+When you use Docker-in-Docker, the standard authentication methods do not work, because a fresh Docker daemon is started with the service.
+
+```bash
+cp ~/.docker/config.json /opt/.docker/
+
+[[runners]]
+  ...
+  executor = "docker"
+  [runners.docker]
+    ...
+    privileged = true
+    volumes = ["/opt/.docker/config.json:/root/.docker/config.json:ro"]
+```

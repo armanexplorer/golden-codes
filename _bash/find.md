@@ -16,6 +16,7 @@ In the context of the find command, the difference between using + and ; at the 
 
 
 Here's an example to illustrate the difference:
+
 ```bash
 # Using +
 find . -name "*.txt" -exec cat {} +
@@ -25,3 +26,32 @@ find . -name "*.txt" -exec cat {} ;
 ```
 
 In the first example, the cat command is run once with all the matched files as arguments, while in the second example, the cat command is run separately for each matched file.
+
+## some example
+
+```bash
+find . -maxdepth 1 -type f -name "*.sql" -delete
+```
+
+## about -mtime
+
+The `-mtime` option in the `find` command is used to search for files based on their modification time. The `+1` argument specifies that the files should have been modified more than 1 day ago.
+
+Here's the meaning of `-mtime +1`:
+
+- `-mtime` - This option specifies that the search should be based on the modification time of the files.
+- `+1` - The `+` sign indicates "greater than". So `+1` means "more than 1 day ago".
+
+In other words, `-mtime +1` will match files that were last modified more than 24 hours ago (i.e. at least 2 days ago).
+
+Some examples:
+
+- `find . -mtime +1 -print` - Find all files in the current directory and subdirectories that were modified more than 1 day ago and print their paths.
+
+- `find /var/log -mtime +7 -exec rm {} \;` - Find all files under `/var/log` that were modified more than 7 days ago and delete them.
+
+- `find /home -user john -mtime +30 -type f` - Find all regular files owned by user "john" under `/home` that were modified more than 30 days ago.
+
+The `-mtime` option can also use `-` to match files modified less than N days ago, and no sign to match files modified exactly N days ago.
+
+So in summary, `-mtime +1` is a very useful option to find files that haven't been modified recently based on a specified number of days

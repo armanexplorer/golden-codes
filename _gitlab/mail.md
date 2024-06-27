@@ -15,5 +15,5 @@ docker exec -it gitlab gitlab-ctl reconfigure
 gitlab-rails console
 
 # it should print green things
-Notify.test_email('armanexplorer@gmail.com', 'Eridanus Gitalb', 'Some test message from Eridanus Gitlab').deliver_now
+Notify.test_email('armanexplorer@gmail.com', 'Example Gitalb', 'Some test message from Example Gitlab').deliver_now
 ```

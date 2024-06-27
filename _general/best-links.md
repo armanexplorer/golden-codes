@@ -77,3 +77,9 @@ title: useful links in different subjects
 ## regex test
 
 [regex101](https://regex101.com/)
+
+## free medium
+
+[chrome extension repo](https://github.com/fferrin/free-medium)
+
+[Main repo](https://github.com/Freedium-cfd)

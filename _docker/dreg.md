@@ -15,7 +15,7 @@ if ! [ -x "$(command -v jq)" ]; then
 fi
 
 # default FQDN registry name
-DEF_FULL_REG="https://registry.eridanus.ir"
+DEF_FULL_REG="https://registry.example.com"
 
 # colors
 INFO='\e[34m'
