@@ -378,3 +378,6 @@ collections:
   storage:
     output: true
     permalink: /:collection/:name
+  security:
+    output: true
+    permalink: /:collection/:name
