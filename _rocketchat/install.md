@@ -7,6 +7,8 @@ title: how to install and upgrade rocketchat servser
 
 [Docs](https://docs.rocket.chat/deploy/deploy-rocket.chat/additional-deployment-methods/deploy-on-debian)
 
+[Update docs](https://docs.rocket.chat/docs/updating-rocketchat)
+
 ```bash
 sudo apt -y update
 sudo apt -y upgrade
@@ -16,7 +18,7 @@ sudo apt install -y curl build-essential graphicsmagick
 curl -L https://releases.rocket.chat/latest/download -o /tmp/rocket.chat.tgz
 tar xzf /tmp/rocket.chat.tgz -C /tmp
 
-# WARNING: you should ensure this is runing with the required node version (mostly 14.21.3)
+# WARNING: you should ensure this is running with the required node version (mostly 14.21.3)
 # Solution: install this node version in `rocketchat` user and run the following with that user
 sudo su - rocketchat
 (cd /tmp/bundle/programs/server; npm i)

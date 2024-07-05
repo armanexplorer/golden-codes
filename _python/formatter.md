@@ -6,6 +6,22 @@ title: all about python formatters
 
 [#noqa-ignore-one-line](https://flake8.pycqa.org/en/latest/user/violations.html#in-line-ignoring-errors)
 
+[flake8-comprehensions](https://pypi.org/project/flake8-comprehensions/)
+
+[Flake8 configuration](https://flake8.pycqa.org/en/latest/user/configuration.html)
+
 ## mypy
 
 [Docs](https://mypy.readthedocs.io/en/stable/)
+
+## ruff
+
+[Docs](https://docs.astral.sh/ruff/)
+
+[Ruff Formatter](https://docs.astral.sh/ruff/formatter/)
+
+[Ruff Linter](https://docs.astral.sh/ruff/linter/)
+
+[Pre-commit Repo](https://github.com/astral-sh/ruff-pre-commit)
+
+[C408](https://docs.astral.sh/ruff/rules/unnecessary-collection-call/)

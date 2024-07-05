@@ -1,5 +1,5 @@
 ---
-title: Gitalb install
+title: Gitlab install
 descriptions: How to install Gitlab Omnibus using Docker
 ---
 

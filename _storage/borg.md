@@ -2,6 +2,9 @@
 title: how to work with borg
 ---
 
+[Docs](https://borgbackup.readthedocs.io/en/latest/)
+[Hetzner Docs](https://community.hetzner.com/tutorials/install-and-configure-borgbackup)
+
 ```bash
 cat ~/.ssh/id_ed25519.pub | ssh ht-storage install-ssh-key
 
@@ -60,3 +63,35 @@ The optimal compression choice depends on your needs. Here's a quick guideline:
 * **Faster Backups:** If backup speed is critical, using zstd or even lzma with a lower compression level (e.g., `--compression lzma:3`) might be a better option.
 
 By understanding the default behavior and available compression algorithms, you can configure borg to best suit your backup requirements.
+
+## prune
+
+```bash
+borg prune --dry-run --list --stats --glob-archives "gitlab*" --keep-minutely 1
+
+borg prune --dry-run --list --stats --glob-archives "gitlab*" --keep-last 1
+```
+
+A good procedure is to thin out more and more the older your backups get.
+As an example, `--keep-daily` **7 means to keep the latest backup on each day,
+up to 7 most recent days with backups (days without backups do not count)**.
+
+The rules are applied from secondly to yearly, and backups selected by previous
+rules do not count towards those of later rules. The time that each backup
+starts is used for pruning purposes. Dates and times are interpreted in
+the local timezone, and weeks go from Monday to Sunday. Specifying a
+negative number of archives to keep means that there is no limit. As of borg
+1.2.0, borg will retain the oldest archive if any of the secondly, minutely,
+hourly, daily, weekly, monthly, or yearly rules was not otherwise able to meet
+its retention target. This enables the first chronological archive to continue
+aging until it is replaced by a newer archive that meets the retention criteria.
+
+The `--keep-last` N option is doing the same as `--keep-secondly` N (and it will
+keep the last N archives under the assumption that you do not create more than one
+backup archive in the same second).
+
+## delete
+
+```bash
+ borg delete --dry-run --list --stats ::gitlab_backup_XXX-XX-XX
+```

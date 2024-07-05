@@ -381,3 +381,18 @@ collections:
   security:
     output: true
     permalink: /:collection/:name
+  shoutrrr:
+    output: true
+    permalink: /:collection/:name
+  gpg:
+    output: true
+    permalink: /:collection/:name
+  diun:
+    output: true
+    permalink: /:collection/:name
+  apprise:
+    output: true
+    permalink: /:collection/:name
+  watchtower:
+    output: true
+    permalink: /:collection/:name

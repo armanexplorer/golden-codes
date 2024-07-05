@@ -30,6 +30,10 @@ title: tools for Git Hooks
 
 [markdownlint](https://github.com/igorshubovych/markdownlint-cli)
 
+[ruff](https://github.com/astral-sh/ruff-pre-commit)
+
 ## good samples
 
 [flake sample](https://github.com/PyCQA/flake8/blob/main/.pre-commit-config.yaml)
+
+[AMAZON CIS](https://github.com/ansible-lockdown/AMAZON2023-CIS/blob/devel/.pre-commit-config.yaml)
