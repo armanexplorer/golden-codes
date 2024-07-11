@@ -396,3 +396,6 @@ collections:
   watchtower:
     output: true
     permalink: /:collection/:name
+  translate:
+    output: true
+    permalink: /:collection/:name
