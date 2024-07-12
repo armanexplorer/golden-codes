@@ -34,6 +34,6 @@ logrotate -vf /etc/logrotate.d/myapp
 logrotate -d /etc/logrotate.d/myapp
 ```
 
-## multipath
+## multi-path (WORKED!)
 
 [Ref](https://superuser.com/questions/255951/logrotate-configuration-file-syntax-multiple-wildcard-entries-possible)

@@ -2,6 +2,8 @@
 title: all about mount in linux
 ---
 
+## step by step to mount permanently
+
 **1. Identify the Drive and Mount Point:**
 
 * Open a terminal window.
@@ -112,3 +114,11 @@ In this example:
 * While `dump` might not be heavily used in modern systems, it's still good practice to understand the option.
 * Setting the correct `<fsck>` values is essential for maintaining filesystem health. The root partition should always have the highest priority for checks.
 * Refer to the `man fstab` command for more detailed information on these options and other functionalities within the `/etc/fstab` file.
+
+## mount ntfs3
+
+First instal lthe ntfs-3g package (advised by [Debian](https://wiki.debian.org/NTFS))
+
+```bash
+sudo apt-get install ntfs-3g
+```
