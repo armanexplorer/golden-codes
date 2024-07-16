@@ -34,6 +34,16 @@ gcloud auth application-default login
 cat $HOME/.config/gcloud/application_default_credentials.json
 ```
 
+## install advanced translation client libraries
+
+[Docs](https://cloud.google.com/translate/docs/setup#client_libraries)
+
+
+```bash
+# for advanced translation
+pip install --upgrade google-cloud-translate
+```
+
 ## run
 
 [Docs](https://cloud.google.com/translate/docs/advanced/translate-text-advance)

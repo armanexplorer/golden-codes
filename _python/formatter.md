@@ -25,3 +25,7 @@ title: all about python formatters
 [Pre-commit Repo](https://github.com/astral-sh/ruff-pre-commit)
 
 [C408](https://docs.astral.sh/ruff/rules/unnecessary-collection-call/)
+
+[Max-line-length](https://docs.astral.sh/ruff/settings/#__tabbed_133_2)
+
+[Config](https://docs.astral.sh/ruff/configuration/)

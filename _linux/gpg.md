@@ -2,13 +2,15 @@
 title: how to work with gpg keys in linux
 ---
 
-# Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg)
+## Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg)
+
 [Fix Deprecated](https://askubuntu.com/questions/1403556/key-is-stored-in-legacy-trusted-gpg-keyring-after-ubuntu-22-04-update)
 
 
 This answer is a customization of the one provided by matigo user here. You need to export the GPG key from the deprecated keyring and store it in /usr/share/keyrings for every repo.
 
 Let's begin with `DigitalOcean` key. Open terminal and export the `9FE3 B226 BD77 5196 D8C2  E599 DE88 104A A4C6 383F` key:
+
 ```bash
 apt-key export A4C6383F | sudo gpg --dearmour -o /usr/share/keyrings/digitalocean-agent.gpg
 ```
