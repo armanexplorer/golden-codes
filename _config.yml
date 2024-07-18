@@ -399,3 +399,6 @@ collections:
   translate:
     output: true
     permalink: /:collection/:name
+  ELK:
+    output: true
+    permalink: /:collection/:name
