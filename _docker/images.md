@@ -30,3 +30,13 @@ docker image prune -a --filter "until=72h"
 # At 04:30 on Friday each week
 30 4 ** 5 docker image prune -a --filter "until=168h"
 ```
+
+## busybox
+
+BusyBox is a lightweight Linux operating system image used as the base for the sidecar container. Here's why BusyBox is a good choice in this scenario:
+
+* **Minimal Footprint:** BusyBox is incredibly small, typically ranging from **1-5MB** depending on the variant. This keeps the overall size of your sidecar container minimal, reducing resource consumption and image transfer times.
+* **Focus on Utilities:** BusyBox includes a collection of essential command-line utilities like `bash`, `cp`, `cat`, and more. This allows you to run scripts that rely on basic functionalities without needing a full-fledged Linux distribution.
+* **Standalone Execution:** BusyBox is designed to run independently without relying on a larger system. This makes it ideal for creating simple containers with a single purpose, like running your custom script.
+
+By using BusyBox, you create a lightweight and efficient container specifically designed to execute your script. It avoids the overhead of a larger operating system, making it a suitable choice for this sidecar container approach.

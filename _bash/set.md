@@ -48,3 +48,11 @@ echo $? # but this will be 1
 ```bash
 set -- postgres "$@"
 ```
+
+This command patches `postgres` argument as the first positional argument along the existing ones (`$@`)
+
+**set --**: This part is specific to the shell scripting language (like Bash). It clears any existing positional parameters (arguments passed to the script) and sets the following arguments as new positional parameters.
+
+**postgres**: This is likely the actual command to be executed, which is probably the psql client for interacting with PostgreSQL.
+
+**"$@"**: This expands to all the arguments that were originally passed to the script itself.

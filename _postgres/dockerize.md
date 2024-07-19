@@ -12,10 +12,21 @@ title: all about dockerizing postgres
 
 [DockerHub](https://hub.docker.com/_/postgres/)
 
+## dockerfile
+
+[Link](https://github.com/docker-library/postgres/blob/master/Dockerfile-debian.template)
+
+[v16 link](https://github.com/docker-library/postgres/blob/master/16/bookworm/Dockerfile)
+
 ## entrypoint
 
 [Link](https://github.com/docker-library/postgres/blob/master/docker-entrypoint.sh)
 
-## dockerfile
+[v16 link](https://github.com/docker-library/postgres/blob/master/16/bookworm/docker-entrypoint.sh)
 
-[Link](https://github.com/docker-library/postgres/blob/master/Dockerfile-debian.template)
+
+## initdb
+
+[Link](https://github.com/docker-library/postgres/blob/master/docker-ensure-initdb.sh)
+
+[v16 link](https://github.com/docker-library/postgres/blob/master/16/bookworm/docker-ensure-initdb.sh)

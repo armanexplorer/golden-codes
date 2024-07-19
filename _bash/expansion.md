@@ -19,3 +19,28 @@ Note: we can use `:` (colon, bash built-in command) to do nothing and be a place
 ```bash
 : "${POSTGRES_HOST_AUTH_METHOD:=}"
 ```
+
+### shell substitution example
+
+**`${x:=y}` (Assign if unset):**
+
+* If the variable `x` is unset or empty, this substitution assigns the value `y` to `x` **and** expands to the value `y`.
+* If `x` is already set (even to an empty string), it expands to the current value of `x`.
+
+**`${x:-y}` (Default if unset):**
+
+* If the variable `x` is unset or empty, this substitution simply expands to the value `y`.
+* It does **not** modify the value of `x` in any way.
+* If `x` is already set (even to an empty string), it expands to the current value of `x`.
+
+Here's a table summarizing the behavior:
+
+| Scenario                 | `${x:=y}` | `${x:-y}` |
+|--------------------------|-----------|-----------|
+| `x` is unset or empty    | Assigns `y` to `x`, expands to `y` | Expands to `y` |
+| `x` is set (even to "")  | Expands to current value of `x` (might overwrite with `y` for `:=`) | Expands to current value of `x` |
+
+**Choosing the right substitution:**
+
+* Use `${x:=y}` when you want to both set a default value and use it in the expansion. This is useful for initializing variables before using them.
+* Use `${x:-y}` when you only need a default value for the expansion and don't want to modify the variable itself.
