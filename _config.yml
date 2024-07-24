@@ -402,3 +402,6 @@ collections:
   ELK:
     output: true
     permalink: /:collection/:name
+  regex:
+    output: true
+    permalink: /:collection/:name
