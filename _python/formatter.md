@@ -29,3 +29,5 @@ title: all about python formatters
 [Max-line-length](https://docs.astral.sh/ruff/settings/#__tabbed_133_2)
 
 [Config](https://docs.astral.sh/ruff/configuration/)
+
+[raise-without-from-inside-except (B904)](https://docs.astral.sh/ruff/rules/raise-without-from-inside-except/)
