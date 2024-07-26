@@ -5,6 +5,27 @@ title: how to work with borg
 [Docs](https://borgbackup.readthedocs.io/en/latest/)
 [Hetzner Docs](https://community.hetzner.com/tutorials/install-and-configure-borgbackup)
 
+## install latest version of borg
+
+[install](https://borgbackup.readthedocs.io/en/stable/installation.html)
+
+```bash
+sudo apt-get install python3 python3-dev python3-pip python3-virtualenv \
+libacl1-dev libacl1 \
+libssl-dev \
+liblz4-dev libzstd-dev libxxhash-dev \
+build-essential \
+pkg-config python3-pkgconfig
+sudo apt-get install libfuse-dev fuse    # needed for llfuse
+sudo apt-get install libfuse3-dev fuse3  # needed for pyfuse3
+
+pipx install borgbackup # neededs pkg-config (installed globally with above installs)
+pipx inject borgbackup llfuse
+pipx inject borgbackup pyfuse3
+```
+
+## config repo
+
 ```bash
 cat ~/.ssh/id_ed25519.pub | ssh ht-storage install-ssh-key
 
@@ -14,6 +35,17 @@ export BORG_RSH='ssh -i /home/user/.ssh/id_ed25519'
 borg init --encryption=repokey ssh://storage-host/./backups
 borg create ssh://storage-host/./backups::2024_6_21_initial ~/olds
 borg list ssh://storage-host/./backups
+
+# set default repo to be used in following commands (::2024_6_21_initial instead of fully name)
+export BORG_REPO=ssh://ht-storage/./backups
+```
+
+## mount
+
+```bash
+
+mkdir /tmp/borg_mount
+borg mount ::2024_6_21_initial /tmp/borg_mount
 ```
 
 ## compression

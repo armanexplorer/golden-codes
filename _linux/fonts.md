@@ -1,5 +1,5 @@
 ---
-title: chagne the deafult font
+title: change the default font
 ---
 
 [Debian](https://wiki.debian.org/Fonts)

@@ -1,5 +1,5 @@
 ---
-title: how to work with gpg keys in linux
+title: how to work with gpg keys in apt
 ---
 
 ## Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg)

@@ -29,3 +29,11 @@ Generally, ManyToManyField instances should go in the object that’s going to b
 [Base Examples](https://docs.djangoproject.com/en/5.0/topics/db/examples/one_to_one/)
 
 - Example: Each Restaurant has only and only one specific Place, and each Place belongs sto only and only one specific Restaurant
+
+## one-to-many
+
+Django doesn't explicitly define a One-to-Many relationship. However, it arises naturally from the Many-to-One relationship.
+
+One-to-Many is `implicit` and accessed through the `related manager`, e.g., `comment_set` in the example of Blog and Comment relation
+
+The `related_name` argument in the ForeignKey field can be used to customize the name of the `related manager`.

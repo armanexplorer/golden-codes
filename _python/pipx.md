@@ -1,5 +1,5 @@
 ---
-title: install applications wich CLIs with isolated Virtual Environments
+title: install applications having CLIs using isolated Virtual Environments
 ---
 
 [Repo](https://github.com/pypa/pipx/tree/main)

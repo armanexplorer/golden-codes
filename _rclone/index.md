@@ -1,5 +1,5 @@
 ---
-title: rclone has been used by seldon as file storage
+title: rclone install and configure the work with File Storages
 ---
 
 ## install

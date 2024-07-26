@@ -20,3 +20,23 @@ variables:
 [Ref](https://forum.gitlab.com/t/submodules-in-ci-cd-not-accessible/82575/2)
 
 You should enable access to the submodule repo for the current repo which want to use it as git submodule
+
+
+## some example
+
+```bash
+
+git config -f .gitmodules submodule.$UPSTREAM_PROJECT_NAME.branch $UPSTREAM_BRANCH_NAME
+git config --file .gitmodules --get-regexp '\.url$' | awk '{print $2}'
+
+git config --file .gitmodules --get-regexp path
+
+git submodule foreach --quiet 'echo $sm_path'
+
+# temp access to submodule project when pipeline is running
+(https://gitlab-ci-token:[MASKED]@gitlab.eridanus.ir/propision/ai/property-analytics.git)
+(https://gitlab-ci-token:[MASKED]@gitlab.eridanus.ir/propision/ai/property-analytics.git)
+
+https://gitlab-ci-token:[MASKED]@gitlab.eridanus.ir/propision/ai/property-analytics.git
+https://gitlab-ci-token:[MASKED]@gitlab.eridanus.ir/propision/ai/property-analytics.git
+```
