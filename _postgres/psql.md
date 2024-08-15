@@ -1,16 +1,17 @@
 ---
+title: how to work with Postgres Client
 ---
 
 [Ref1](https://www.postgresql.org/docs/current/app-psql.html)
 
-# connect to postgres in docker container
+## connect to postgres in docker container
 
 ```bash
 # reads the password from ``POSTGRES_PASSWORD`` env var
 psql -U db_user -d db_name [-h localhost -p 5432]
 ```
 
-# some flags
+## some flags
 
 -W
 --password
@@ -20,14 +21,24 @@ If the server requires password authentication and a password is not available f
 
 Note that this option will remain set for the entire session, and so it affects uses of the meta-command \connect as well as the initial connection attempt.
 
-# dump
+## dump
 
 ```bash
 pg_dump dbname > outfile
 ```
 
-# restore
+## restore
 
 ```bash
 psql dbname < infile
+```
+
+## inspect tables and columns
+
+```bash
+# inspect table fields
+\d table_name
+
+# inspect specific field
+SELECT pg_typeof(table_field) FROM table_name LIMIT 1;
 ```

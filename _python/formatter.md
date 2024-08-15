@@ -31,3 +31,5 @@ title: all about python formatters
 [Config](https://docs.astral.sh/ruff/configuration/)
 
 [raise-without-from-inside-except (B904)](https://docs.astral.sh/ruff/rules/raise-without-from-inside-except/)
+
+[private-member-access (SLF001)](https://docs.astral.sh/ruff/rules/private-member-access/)

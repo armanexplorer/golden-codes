@@ -2,6 +2,8 @@
 title: all about test in django
 ---
 
+[Docs](https://docs.djangoproject.com/en/5.0/topics/testing/tools/)
+
 ## asserts
 
 [check exception raises](https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertRaises)

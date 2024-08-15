@@ -1,14 +1,14 @@
 ---
-title: work with docker images
+title: work with docker image
 ---
 
-## remove dangle images
+## aliases
 
-```bash
-docker images --format "{{.ID}}" --filter "dangling=true" | xargs docker image rm --force
-```
+`docker image ls` == `docker image list` == `docker images`
 
-[Reference](https://docs.docker.com/engine/reference/commandline/images/)
+## list images with filters
+
+[Docs](https://docs.docker.com/reference/cli/docker/image/ls/)
 
 ```bash
 docker images --filter "reference=*/project_token"
@@ -22,13 +22,28 @@ docker images --filter "reference=*/project_token"
 
 [Docs](https://docs.docker.com/reference/cli/docker/image/prune/)
 
+Remove all dangling (untagged+unused) images. If `-a` is specified, also remove all images not referenced by any container (unused but might be tagged).
+
+`-a`: Remove all unused images, not just dangling ones
+
+Note: `docker prune` never removes images which are being used in some container!
+
 ```bash
-# remove all not used and dangled images older than 72h
+# remove all unused images (including dangling and tagged ones) older than 72h
 docker image prune -a --filter "until=72h"
 
 # Also, you can add it to crontab
 # At 04:30 on Friday each week
 30 4 ** 5 docker image prune -a --filter "until=168h"
+
+# using $(()) syntax
+docker image prune --filter "until=$((30*24))h"
+```
+
+## remove dangling images without prune
+
+```bash
+docker images --format "{{.ID}}" --filter "dangling=true" | xargs docker image rm --force
 ```
 
 ## busybox

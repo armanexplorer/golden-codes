@@ -60,3 +60,23 @@ class Prefetch(lookup, queryset=None, to_attr=None)
 ```
 
 The Prefetch() object can be used to control the operation of prefetch_related().
+
+### nested prefetches example
+
+```py
+Prefetch(
+    "cross_references",
+    queryset=Annotation.objects.annotate(
+        law_abbreviation=F("translation__abbreviation"),
+        document_abbreviation=F("document_translation__abbreviation"),
+    )
+    .prefetch_related("creator__profile")
+    .all(),
+),
+```
+
+## N+1 Queries performance issue
+
+[Details](https://docs.sentry.io/product/issues/issue-details/performance-issues/n-one-queries/)
+
+[Solution](https://blog.sentry.io/finding-and-fixing-django-n-1-problems/)

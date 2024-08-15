@@ -24,8 +24,14 @@ title: test mail server is good enough
 
 ## Spam check
 
-[ref](https://www.experte.com/spam-checker)
+[GREAT TOOL](https://spamchecker.mailreach.co/)
+
+[ref](https://www.experte.com/spam-checker)(worked)
 
 [ref](https://cleantalk.org/email-checker)
 
 [MXToolbox](https://mxtoolbox.com/SuperTool.aspx?action=blacklist%3a103.75.197.244)
+
+## URL Block List Check
+
+<https://www.mailgenius.com/>

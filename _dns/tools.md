@@ -6,4 +6,6 @@ title: DNS online tools
 
 [dnschecker - Check NS](https://dnschecker.org/#NS/)
 
-[cehck host - Check NS](https://check-host.net/check-dns?host=dev.propision.com)
+[check host - Check NS](https://check-host.net/check-dns?host=dev.propision.com)
+
+[Deep DNS Checker](https://intodns.com/)
