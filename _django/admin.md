@@ -43,3 +43,38 @@ class CustomEmailBackend(BaseEmailBackend):
             super().send_messages([message])
 
 ```
+
+## related models
+
+Inline mode:
+
+```py
+from django.contrib import admin
+from .models import Book, Author
+
+class AuthorInline(admin.TabularInline):
+    model = Author
+    extra = 1  # Optional: Number of empty forms to show
+
+class BookAdmin(admin.ModelAdmin):
+    inlines = [AuthorInline]
+
+admin.site.register(Book, BookAdmin)
+```
+
+
+
+```py
+from django.contrib import admin
+from django.utils.html import format_html
+from .models import Book, Author
+
+def author_link(obj):
+    return format_html('<a href="{}">{}</a>', reverse('admin:app_author_change', args=[obj.author.id]), obj.author.name)
+author_link.short_description = 'Author'
+
+class BookAdmin(admin.ModelAdmin):
+    list_display = ('title', author_link, 'publication_date')
+
+admin.site.register(Book, BookAdmin)
+```

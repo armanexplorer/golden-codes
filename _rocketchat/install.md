@@ -20,13 +20,20 @@ tar xzf /tmp/rocket.chat.tgz -C /tmp
 
 # WARNING: you should ensure this is running with the required node version (mostly 14.21.3)
 # Solution: install this node version in `rocketchat` user and run the following with that user
+sudo chown -R rocketchat:rocketchat /tmp/bundle
 sudo su - rocketchat
 (cd /tmp/bundle/programs/server; npm i)
 exit
 
 systemctl stop rocketchat
+
+# if some old version exists, back it up first!
+sudo mv /opt/Rocket.Chat /opt/old-Rocket.Chat
+
+# prepare new version
 sudo mv /tmp/bundle /opt/Rocket.Chat
 sudo chown -R rocketchat:rocketchat /opt/Rocket.Chat
+
 systemctl start rocketchat
 ```
 

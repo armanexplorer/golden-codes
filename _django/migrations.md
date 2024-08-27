@@ -29,3 +29,7 @@ You must then `transition` the squashed migration to a `normal migration` by:
 NOTE: Once you’ve squashed a migration, you should not then re-squash that squashed migration until you have fully `transitioned` it to a `normal migration`.
 
 NOTE: If it is likely that you may `reuse` the name of a deleted migration in the future, you should `remove references` to it from `Django’s migrations table` with the `migrate --prune` option.
+
+## data migrations
+
+[Link](https://docs.djangoproject.com/en/5.1/topics/migrations/#data-migrations)

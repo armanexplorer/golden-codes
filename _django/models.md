@@ -1,10 +1,12 @@
 ---
-title: models in Django
+title: models and the model instances in Django
 ---
 
 [Docs](https://docs.djangoproject.com/en/5.0/topics/db/models/)
 
 [Options Docs](https://docs.djangoproject.com/en/5.0/ref/models/options/)
+
+[Instances Docs](https://docs.djangoproject.com/en/5.0/ref/models/instances/)
 
 ## save method
 

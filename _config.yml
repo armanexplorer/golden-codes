@@ -405,3 +405,6 @@ collections:
   regex:
     output: true
     permalink: /:collection/:name
+  elasticsearch:
+    output: true
+    permalink: /:collection/:name

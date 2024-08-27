@@ -1,5 +1,5 @@
 ---
-title: how to set up infru. of cc servers with MPS gpu equipped
+title: how to set up infrastructure of cc servers with MPS gpu equipped
 ---
 
 ## clone ipa through terminal using HTTPS
@@ -93,13 +93,11 @@ enable_single_gpu
 ## build yolo model
 
 ```bash
-cd ~/ipa-private
-make build_yolo
+(cd ~/ipa-private && make build_yolo)
 ```
 
 ## setup single pod watcher (SPW)
 
 ```bash
-cd ~/ipa-private
-make install-single-pod-watcher
+(cd ~/ipa-private && make install-single-pod-watcher)
 ```
