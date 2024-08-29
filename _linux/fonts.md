@@ -52,3 +52,15 @@ To add a font to Debian, you can follow these steps:
 
 4. **Additional Resources**:
    - You can also explore further resources like GitHub for scripts to install `TTF` fonts in Debian, which involve moving the font files to `/usr/share/fonts/truetype`, updating font configurations, and refreshing the font cache.
+
+## list fonts
+
+```bash
+fc-list
+```
+
+## view and manage fonts
+
+- pango-view
+- fontconfig-tool
+- ttfls

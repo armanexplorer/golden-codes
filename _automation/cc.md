@@ -68,7 +68,10 @@ git config --list
 Open tmux and run `build.sh` script
 
 ```bash
+# open tmux
 tmux
+
+# run build code
 ~/ipa/infrastructure/build.sh
 ```
 
