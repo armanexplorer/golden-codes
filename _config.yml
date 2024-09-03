@@ -408,3 +408,9 @@ collections:
   elasticsearch:
     output: true
     permalink: /:collection/:name
+  mkdocs:
+    output: true
+    permalink: /:collection/:name
+  pymdown:
+    output: true
+    permalink: /:collection/:name

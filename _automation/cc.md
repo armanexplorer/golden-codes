@@ -2,6 +2,10 @@
 title: how to set up infrastructure of cc servers with MPS gpu equipped
 ---
 
+## system
+
+You MUST have `Ubuntu20.04` system.
+
 ## clone ipa through terminal using HTTPS
 
 ```bash
@@ -36,19 +40,20 @@ Run this in your local system with the remote server IP instead of the following
 ssh-keygen -f "/home/arman/.ssh/known_hosts" -R "192.5.87.154"
 ```
 
-### open the remote host
+### open the remote host and clone ipa-private
 
-- Open the remote host in VS Cdoe to be able to pull codes from private repos
-- install `@id:ms-python.python` extension
-- install `@id:ms-toolsai.jupyter` extension
-- install `@id:ms-vscode.makefile-tools` extension (optional - makefile formatter)
-- install `@id:foxundermoon.shell-format`extension (optional - bash formatter)
-
-## clone ipa-private using HTTPS
+Open the remote host in VSCdoe to be able to pull codes from private repos
 
 ```bash
 git clone --single-branch --branch cg https://github.com/armanexplorer/ipa-private-arman.git ~/ipa-private
 ```
+
+Enable VSCode extensions:
+
+- `@id:ms-python.python`
+- `@id:ms-toolsai.jupyter`
+- `@id:ms-vscode.makefile-tools`  (optional - makefile formatter)
+- `@id:foxundermoon.shell-format` (optional - bash formatter)
 
 ## config git credentials
 
@@ -59,8 +64,8 @@ To be able to make authorized commits
 git config --global user.name "Arman Mazloumzadeh"
 git config --global user.email "armanexplorer@gmail.com"
 
-# check
-git config --list
+# verify name and email
+git config --list | cat
 ```
 
 ## run build.sh
@@ -78,6 +83,9 @@ tmux
 ## add gpu (optional)
 
 ```bash
+# open tmux (prevent from manipulating shell behavior with ``set -e``)
+tmux
+
 source ~/ipa/infrastructure/hack/gpu.sh
 ```
 
