@@ -414,3 +414,6 @@ collections:
   pymdown:
     output: true
     permalink: /:collection/:name
+  finnotech:
+    output: true
+    permalink: /:collection/:name

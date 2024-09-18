@@ -1,7 +1,18 @@
 ---
+title: all about kubectl kubernetes cli
 ---
 
+[Docs](https://kubernetes.io/docs/reference/kubectl/)
+
+## command examples
+
 ```bash
+# get kubernetes client and server versions
+kubectl version --short
+
+# get a resource in all namespaces
+kubectl get pvc --all-namespaces # (or -A)
+
 # delete all common types of resources from a namespace
 kubectl delete all --all -n $namespace
 

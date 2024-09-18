@@ -17,3 +17,7 @@ title: all about configuring LaTeX Workshop
 [Views Docs](https://github.com/James-Yu/LaTeX-Workshop/wiki/View)
 
 [Intellisense](https://github.com/James-Yu/LaTeX-Workshop/wiki/Intellisense)
+
+## Problem Panels full with Warnings
+
+[Link](https://github.com/James-Yu/LaTeX-Workshop/issues/1794)
