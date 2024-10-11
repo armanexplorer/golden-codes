@@ -19,7 +19,7 @@ pkg-config python3-pkgconfig
 sudo apt-get install libfuse-dev fuse    # needed for llfuse
 sudo apt-get install libfuse3-dev fuse3  # needed for pyfuse3
 
-pipx install borgbackup # neededs pkg-config (installed globally with above installs)
+pipx install borgbackup # needs pkg-config (installed globally with above installs)
 pipx inject borgbackup llfuse
 pipx inject borgbackup pyfuse3
 ```

@@ -37,3 +37,23 @@ title: tools for Git Hooks
 [flake sample](https://github.com/PyCQA/flake8/blob/main/.pre-commit-config.yaml)
 
 [AMAZON CIS](https://github.com/ansible-lockdown/AMAZON2023-CIS/blob/devel/.pre-commit-config.yaml)
+
+## gitleaks
+
+[Repo Link](https://github.com/gitleaks/gitleaks/tree/master)
+
+### ignore false positive
+
+[Link](https://github.com/gitleaks/gitleaks/tree/master?tab=readme-ov-file#gitleaksallow)
+
+Add a comment with `gitleaks:allow` to the line containing the error we want ignore
+
+## detect-secrets
+
+[Repo Link](https://github.com/Yelp/detect-secrets)
+
+### ignore false positives
+
+Add a comment with `pragma: allowlist secret` in that line or `pragma: allowlist nextline secret` in its previous line
+
+[Link](https://github.com/Yelp/detect-secrets?tab=readme-ov-file#inline-allowlisting)

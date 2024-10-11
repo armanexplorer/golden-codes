@@ -417,3 +417,6 @@ collections:
   finnotech:
     output: true
     permalink: /:collection/:name
+  web:
+    output: true
+    permalink: /:collection/:name

@@ -14,7 +14,7 @@ These Envs make the `pycharm.sh` file to use some special `VM_OPTIONS` file
 
 Close the current terminal and open another terminal to run `pycharm.sh` in the following steps.
 
-### Downlaod
+### Download
 
 Download the tar.gz file from [here](https://www.jetbrains.com/pycharm/download/?section=linux)
 
@@ -39,7 +39,7 @@ sh pycharm.sh
 
 On the `Welcome` screen, click `Options Menu | Create Desktop Entry`.
 
-### Add to Jetbrains Toolbox
+### Add to JetBrains Toolbox
 
 *warning*: it might be not necessary if you fill the `state.json` (in `~/.local/share/JetBrains/Toolbox`) truly according to the current path of your app with something like this:
 
@@ -66,12 +66,12 @@ In the `Extract` step, you should extract here:
 ```bash
 sudo tar xzf pycharm-*.tar.gz -C ~/.local/share/JetBrains/Toolbox/apps/
 
-# change the name to be obvious for Jetbrains Toolbox
+# change the name to be obvious for JetBrains Toolbox
 cd ~/.local/share/JetBrains/Toolbox/apps/
 mv pycharm-2024.1.1 pycharm-professional
 ```
 
-Then you should probably wait (maybe some minutes) or restart to make Jetbrains Tools understand the change and load the Pycharm Professional in the apps list
+Then you should probably wait (maybe some minutes) or restart to make JetBrains Tools understand the change and load the Pycharm Professional in the apps list
 
 #### The thing (\\:/)
 
@@ -83,4 +83,4 @@ After the app loaded, you should go to the app settings and go to the `Edit JVM 
 --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED
 ```
 
-Fill the `x` afther `/home/` with the right place for your thing!
+Fill the `x` after `/home/` with the right place for your thing!
