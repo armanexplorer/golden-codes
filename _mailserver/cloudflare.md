@@ -1,4 +1,5 @@
 ---
+title: how we can configure mail server in CF
 ---
 
 [Setup Email Records](https://developers.cloudflare.com/dns/manage-dns-records/how-to/email-records/)

@@ -26,26 +26,46 @@ pipx inject borgbackup pyfuse3
 
 ## config repo
 
+### configure the git config
+
+```bash
+nano ~/.ssh/config
+
+Host ht-storage
+    HostName uXXXXXX.example.com
+    User uXXXXXX-subY
+    Port YOUR_PORT
+    # uncomment this after setting the ssh key
+    # IdentityFile ~/.ssh/id_ed25519
+```
+
+### config other things
+
 ```bash
 cat ~/.ssh/id_ed25519.pub | ssh ht-storage install-ssh-key
 
-export BORG_PASSPHRASE="XXXXXXXXXXXXX"
+export BORG_PASSPHRASE='XXXXXXXXXXXXX'
 export BORG_RSH='ssh -i /home/user/.ssh/id_ed25519'
 
-borg init --encryption=repokey ssh://storage-host/./backups
-borg create ssh://storage-host/./backups::2024_6_21_initial ~/olds
+borg init --encryption=repokey ssh://ht-storage/./backups
+borg create ssh://ht-storage/./backups::test-{now:%Y-%m-%d} ~/olds
 borg list ssh://storage-host/./backups
 
-# set default repo to be used in following commands (::2024_6_21_initial instead of fully name)
+# set default repo to be used in following commands (then we can use :: instead of ssh://ht-storage/./backups::)
 export BORG_REPO=ssh://ht-storage/./backups
 ```
 
 ## mount
 
 ```bash
-
+# create empty directory to mount borg repo or its archives
 mkdir /tmp/borg_mount
+
+# mount an archive of current repo
 borg mount ::2024_6_21_initial /tmp/borg_mount
+
+# mount the whole repo
+borg mount :: /tmp/borg_mount
 ```
 
 ## compression

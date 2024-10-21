@@ -81,3 +81,7 @@ The value `source='*'` has a special meaning, and is used to indicate that the `
 ### source='*'
 
 [Docs](https://www.django-rest-framework.org/api-guide/fields/#using-source)
+
+## extensions
+
+[Repo](https://github.com/chibisov/drf-extensions)

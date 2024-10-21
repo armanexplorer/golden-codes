@@ -73,3 +73,9 @@ The `PreferredAuthentications` option in your SSH client configuration dictates 
 * **gssapi-with-mic:** This method utilizes a security framework called GSSAPI (Generic Security Services Application Program Interface) for authentication. It relies on pre-established credentials on both the client and server for verification.  GSSAPI is less commonly used due to its complexity and potential compatibility issues.
 
 * **hostbased:** This method relies on pre-configured host keys on both the client and server. The client verifies the server's host key against its trusted list. This method offers some security benefits but is discouraged because managing trusted host keys can be cumbersome and there are potential security risks associated with compromised keys.
+
+## disable host key check
+
+```bash
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null username@hostname
+```
