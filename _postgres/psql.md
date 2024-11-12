@@ -42,3 +42,41 @@ psql dbname < infile
 # inspect specific field
 SELECT pg_typeof(table_field) FROM table_name LIMIT 1;
 ```
+
+## see unique constraints of a table
+
+Simply run:
+
+```bash
+# find table name
+\d
+
+# see the uniques along with other info of table
+\d table_name
+```
+
+### second method
+
+```bash
+# find the table name
+\d
+
+SELECT conname AS constraint_name
+FROM pg_constraint
+JOIN pg_class ON conrelid = pg_class.oid
+WHERE relname = 'table_name'
+AND contype = 'u';
+```
+
+## remove a unique constraint from a table
+
+```bash
+ALTER TABLE cart DROP CONSTRAINT cart_shop_user_id_key;
+```
+
+## add unique constraint to a table
+
+```bash
+ALTER TABLE table_name
+ADD CONSTRAINT unique_column1_column2 UNIQUE (column1, column2);
+```

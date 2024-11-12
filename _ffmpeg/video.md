@@ -4,7 +4,7 @@ title: how to convert and edit videos
 
 ## convert webm to mp4
 
-It will convert to 128kb/s
+It will convert to `128kb/s`
 
 ```bash
 ffmpeg -i input.webm -c:v libx264 -preset slow -crf 22 -c:a aac -b:a 128k output.mp4

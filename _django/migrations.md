@@ -15,8 +15,10 @@ python manage.py migrate
 
 # After successfully applying the squashed migration, you can optionally remove the old migration files that were squashed.
 # WARNING: DO THIS ONLY IF ALL USERS HAVE BEEN COMMITTED THIS
-# python manage.py migrate --prune
+# python manage.py migrate --prune <app_name>
 ```
+
+NOTE: Maybe it is better to create new migration and then delete the old ones, because it leads to updating the migrations table and you can see it by running `showmigrations <app_name>`
 
 Once you’ve squashed your migration, you should then commit it alongside the migrations it replaces and `distribute this change` to all running instances of your application, making sure that they run `migrate` to store the change in their database.
 

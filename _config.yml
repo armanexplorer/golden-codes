@@ -420,3 +420,6 @@ collections:
   web:
     output: true
     permalink: /:collection/:name
+  openai:
+    output: true
+    permalink: /:collection/:name

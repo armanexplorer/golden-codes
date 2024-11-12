@@ -12,8 +12,8 @@ wget "${DMS_GITHUB_URL}/mailserver.env"
 ```
 
 - edit compose.yaml:
-  - append `/etc/letsencrypt:/etc/letsencrypt` to the volumes for enabling lets encrypt
-  - change the hostname to the hostname of mail server (`mail.example.com`)
+    - append `/etc/letsencrypt:/etc/letsencrypt` to the volumes for enabling lets encrypt
+    - change the hostname to the hostname of mail server (`mail.example.com`)
 
 - edit `mailserver.env` (all environments are there)
 
@@ -64,12 +64,14 @@ set-option-for-module classifier-bayes autolearn true
 EOF
 
 # config DKIM by running this and save the output as TXT DNS record
-# ! WARNING: IT IS ONLY FOR ONE DOMAIN, FOR MULTIPLE, CHECK THE DKIM DOCS
+# ! WARNING: IT IS ONLY FOR ONE DOMAIN, FOR MULTIPLE, CHECK THE DKIM [Docs](https://docker-mailserver.github.io/docker-mailserver/latest/config/best-practices/dkim_dmarc_spf/#rspamd)
 docker exec -it mailserver setup config dkim domain example.com
+
+# Note: Don't forget to add MX record and `mail` A record for the extra domain!
 
 # add DMARC record with the help of some good site (https://dmarcguide.globalcyberalliance.org/dmarc)
 
-# add spf record
+# add SPF record
 
 # add some alias (seems like forwarding emails to the destination)
 

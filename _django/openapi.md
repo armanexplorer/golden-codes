@@ -8,6 +8,8 @@ title: add OpenAPI to django
 
 [Docs](https://drf-spectacular.readthedocs.io/en/latest/index.html)
 
+[Settings File Docs](https://drf-spectacular.readthedocs.io/en/latest/settings.html)
+
 ```bash
 ./manage.py spectacular --file schema.yaml --validate --fail-on-warn
 ```
