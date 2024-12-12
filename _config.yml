@@ -423,3 +423,12 @@ collections:
   openai:
     output: true
     permalink: /:collection/:name
+  thunderbird:
+    output: true
+    permalink: /:collection/:name
+  minio:
+    output: true
+    permalink: /:collection/:name
+  cdn:
+    output: true
+    permalink: /:collection/:name

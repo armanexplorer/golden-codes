@@ -112,3 +112,9 @@ enable_single_gpu
 ```bash
 (cd ~/ipa-private && make install-single-pod-watcher)
 ```
+
+## delete this in ubuntu 20
+
+```bash
+iptables -D FORWARD -j REJECT --reject-with icmp-host-prohibited
+```

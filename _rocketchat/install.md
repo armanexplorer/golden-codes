@@ -11,7 +11,7 @@ title: how to install and upgrade rocketchat servser
 
 ```bash
 sudo apt -y update
-sudo apt -y upgrade
+# sudo apt -y upgrade
 
 sudo apt install -y curl build-essential graphicsmagick
 
@@ -43,8 +43,14 @@ systemctl start rocketchat
 
 - Release Page -> <https://github.com/RocketChat/Rocket.Chat/releases>
 - API -> <https://releases.rocket.chat/6.3.0/info> or <https://releases.rocket.chat/latest/info>
-    - ➜ curl <https://releases.rocket.chat/latest/info> -s | jq '.nodeVersion' -r
-- `.node_version` file after building the codes (at the root of `bundle`)
+
+Use like this:
+
+```bash
+curl https://releases.rocket.chat/latest/info -s | jq '.nodeVersion' -r
+```
+
+- see `.node_version.txt` file at the root of `bundle`
 
 ## install with docker
 

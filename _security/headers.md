@@ -48,3 +48,7 @@ title: security headers needed for REST Request Responses
 ## find tech of a site
 
 [Not Bad One](https://sitereport.netcraft.com/)
+
+## X-Frame-Options or CSP: frame-ancestors
+
+[frame-ancestors](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)

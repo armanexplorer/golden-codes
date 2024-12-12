@@ -4,13 +4,14 @@ title: Manager
 description: An intro to Base Manager and its interesting attributes
 ---
 
-# Intro
 This code snippet will add intended (public and not queryset only) queryset methods to the current manager on the fly.
 
 ## `_get_queryset_methods`
+
 Creates the custom methods originated from the `QuerySet` class, then put them with their names as keys in a dictionary.
 
 ## `from_queryset`
+
 Creates a new manager class using `type` with the base class of `cls` (BaseManager) and pass the created dictoinary in `_get_queryset_methods` to be added to the created class.
 
 ```python
