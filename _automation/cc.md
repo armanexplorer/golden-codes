@@ -106,10 +106,16 @@ enable_mps_gpu
 enable_single_gpu
 ```
 
-## build yolo model
+## build yolo base image
 
 ```bash
 (cd ~/ipa-private && make build_yolo_image)
+```
+
+## download yolo repo and weights
+
+```bash
+(cd ~/ipa-private && make download_yolo_repo && make download_yolo_weights && make push_yolo_to_minio)
 ```
 
 ## setup single pod watcher (SPW)
