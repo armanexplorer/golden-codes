@@ -129,3 +129,7 @@ networks:
 ## ingres (routing mesh)
 
 [Docs](https://docs.docker.com/engine/swarm/ingress/)
+
+## secrets
+
+[Docs](https://docs.docker.com/engine/swarm/secrets/)

@@ -32,28 +32,27 @@ customize_zsh
 
 Work with VS Code to clone private repo and enabling jupyter
 
-### remove old ssh host key
+### remove old ssh host key (optional)
 
-Run this in your local system with the remote server IP instead of the following
+In case of problem to connect to host, maybe you should remove old remote host key from your local:
 
 ```bash
-ssh-keygen -f "/home/arman/.ssh/known_hosts" -R "192.5.87.154"
+ssh-keygen -f "/home/arman/.ssh/known_hosts" -R "<remote_ip>"
 ```
 
 ### open the remote host and clone ipa-private
 
-Open the remote host in VSCdoe to be able to pull codes from private repos
+Open the remote host in VSCode to be able to pull codes from private repos
 
 ```bash
 git clone --single-branch --branch cg https://github.com/armanexplorer/ipa-private-arman.git ~/ipa-private
 ```
 
-Enable VSCode extensions:
+### install extensions
 
-- `@id:ms-python.python`
-- `@id:ms-toolsai.jupyter`
-- `@id:ms-vscode.makefile-tools`  (optional - makefile formatter)
-- `@id:foxundermoon.shell-format` (optional - bash formatter)
+```bash
+(cd ~/ipa-private && make install-vscode-extensions)
+```
 
 ## config git credentials
 
