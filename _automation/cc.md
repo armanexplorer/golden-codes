@@ -48,6 +48,12 @@ Open the remote host in VSCode to be able to pull codes from private repos
 git clone --single-branch --branch cg https://github.com/armanexplorer/ipa-private-arman.git ~/ipa-private
 ```
 
+### increase file watchers
+
+```bash
+(cd ~/ipa-private && make increase-file-watchers)
+```
+
 ### install extensions
 
 ```bash
@@ -103,7 +109,7 @@ enable_single_gpu
 ## build yolo model
 
 ```bash
-(cd ~/ipa-private && make build_yolo)
+(cd ~/ipa-private && make build_yolo_image)
 ```
 
 ## setup single pod watcher (SPW)
@@ -115,5 +121,5 @@ enable_single_gpu
 ## delete this in ubuntu 20
 
 ```bash
-iptables -D FORWARD -j REJECT --reject-with icmp-host-prohibited
+sudo iptables -D FORWARD -j REJECT --reject-with icmp-host-prohibited || true
 ```
