@@ -8,6 +8,8 @@ title: all about Django admin and management
 
 [Repo code](https://github.com/django/django/blob/stable/5.1.x/django/utils/termcolors.py#L81)
 
+[Django Admin List Select Related](https://docs.djangoproject.com/en/5.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_select_related)
+
 ## configure admin emails
 
 ```py

@@ -432,3 +432,6 @@ collections:
   cdn:
     output: true
     permalink: /:collection/:name
+  google-drive-ocamlfuse:
+    output: true
+    permalink: /:collection/:name
