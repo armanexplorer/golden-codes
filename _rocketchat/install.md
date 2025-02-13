@@ -5,9 +5,11 @@ title: how to install and upgrade rocketchat servser
 
 ## install on debian
 
-[Docs](https://docs.rocket.chat/deploy/deploy-rocket.chat/additional-deployment-methods/deploy-on-debian)
+[Docs](https://docs.rocket.chat/docs/deploy-on-debian)
 
 [Update docs](https://docs.rocket.chat/docs/updating-rocketchat)
+
+[System Requirements](https://docs.rocket.chat/v1/docs/system-requirements)
 
 ```bash
 sudo apt -y update

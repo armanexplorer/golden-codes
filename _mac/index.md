@@ -20,6 +20,8 @@ title: how to work with mac
 
 [Touchpad Gestures](https://support.apple.com/en-gb/102482)
 
+[Take Screenshot](https://support.apple.com/en-gb/102646)
+
 ## clipboard managers
 
 [reddit page](https://www.reddit.com/r/macapps/comments/13xg34c/best_clipboard_managers_for_macos_working_on/)
