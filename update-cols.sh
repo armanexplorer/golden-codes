@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get a list of all directories starting with an underscore
-directories=($(find . -maxdepth 1 -type d -name '_*' -not -name '_site' -not -name '_layouts' -not -name '_includes' -printf '%f\n'))
+directories=($(find . -maxdepth 1 -type d -name '_*' -not -name '_site' -not -name '_layouts' -not -name '_includes' | sed 's/^\.\///'))
 
 # Loop through the directories and add them to the _config.yml file as collections
 for dir in "${directories[@]}"

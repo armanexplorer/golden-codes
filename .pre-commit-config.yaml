@@ -23,8 +23,8 @@ repos:
       - id: markdownlint
   - repo: local
     hooks:
-      - id: trim-md-files
+      - id: auto-update
         name: Add frontier and update collections
-        entry: bash trim-md-files.sh
+        entry: bash auto-update.sh
         language: system
         files: \.(yaml|yml|md|sh)$

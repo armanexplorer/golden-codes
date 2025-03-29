@@ -6,15 +6,13 @@ markdown: GFM
 title: Golden Codes - armanexplorer planet
 description: Practical code snippets for Django, Python, Bash, Git and All!
 
-
 exclude:
   - "add-front-matter.sh"
   - "update-cols.sh"
-
+  - "**/Makefile"
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "_*"
     values:
       layout: default
@@ -433,5 +431,14 @@ collections:
     output: true
     permalink: /:collection/:name
   google-drive-ocamlfuse:
+    output: true
+    permalink: /:collection/:name
+  nekoray:
+    output: true
+    permalink: /:collection/:name
+  mac:
+    output: true
+    permalink: /:collection/:name
+  shopify:
     output: true
     permalink: /:collection/:name
