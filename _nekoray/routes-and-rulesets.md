@@ -21,7 +21,7 @@ We can fill the profile with `basic` settings like this:
 - Direct:
     - ruleset:geosite-ir
     - ruleset:geoip-ir
-Block:
+- Block:
     - ruleset:geosite-category-ads-all
 
 Now after clicking on OK, you will see restart program message and after that, all the things have been set. Cheers!
