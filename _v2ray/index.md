@@ -6,3 +6,7 @@ title: general thoughts on V2Ray
 
 [x-ui Panel](https://github.com/vaxilu/x-ui)
 [x-ui Tutorial](https://seakfind.github.io/2021/10/10/X-UI/)
+
+[Iran Hosts](https://github.com/bootmortis/iran-hosted-domains)
+[Routing Object](https://www.v2ray.com/en/configuration/routing.html#routingobject)
+[v2dat](https://github.com/urlesistiana/v2dat)
