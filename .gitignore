@@ -2,3 +2,4 @@ _site
 .vscode
 venv
 .aider*
+.DS_Store

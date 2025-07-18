@@ -442,3 +442,6 @@ collections:
   shopify:
     output: true
     permalink: /:collection/:name
+  ollama:
+    output: true
+    permalink: /:collection/:name
