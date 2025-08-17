@@ -445,3 +445,6 @@ collections:
   ollama:
     output: true
     permalink: /:collection/:name
+  cursor:
+    output: true
+    permalink: /:collection/:name
