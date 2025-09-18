@@ -18,30 +18,44 @@ That **84.3 GB in 3 hours** is huge. It likely means your Mac pulled down:
 
 ---
 
+### Stop it FAST and WILDLY
+
+Add this to the `/etc/hosts`:
+
+```bash
+# workaround for idleassets bandwidth consumption
+127.0.0.1             sylvan.apple.com
+```
+
 ### How to prevent huge background downloads
 
 Unfortunately, Apple doesn’t give a simple toggle for `idleassetsd`, but you can limit its impact:
 
-1. **Turn off automatic macOS updates:**
+1. **Set a static image for `Wallpapers` and `Screensavers`:**
+
+   > I contacted Apple Support and they recommended setting Wallpapers and Screensavers to a static image.
+   > After restarting Activity Monitor `idleassetsd` stopped downloading as it is now at 0 bytes sent and recieved.
+
+2. **Block large background traffic:**
+
+   * You can use **Little Snitch** or **LuLu** (firewall apps) to monitor and block `idleassetsd` from accessing Apple servers if you want strict control. The program path to block is `/System/Library/PrivateFrameworks/TVIdleServices.framework/idleassetsd`
+
+3. **Turn off automatic macOS updates:**
 
    * Go to **System Settings → General → Software Update → Automatic Updates**.
    * Disable **“Download new updates when available”** and **“Install system files and security responses”** if you want full control.
 
-2. **Restrict background ML downloads (Apple Intelligence / ML models):**
+4. **Restrict background ML downloads (Apple Intelligence / ML models):**
 
    * Go to **System Settings → General → Siri & Spotlight**.
    * Disable features like **Suggestions**, **Siri learning**, or **Apple Intelligence** (if available in your region).
    * This prevents some of the huge model downloads.
 
-3. **Limit caching servers (for advanced users):**
+5. **Limit caching servers (for advanced users):**
 
    * macOS sometimes acts like a “caching server” for iOS/macOS updates. Check in **System Settings → General → Sharing → Content Caching** and disable it if on.
 
-4. **Block large background traffic temporarily:**
-
-   * You can use **Little Snitch** or **LuLu** (firewall apps) to monitor and block `idleassetsd` from accessing Apple servers if you want strict control.
-
-5. **Clear already-downloaded data (optional):**
+6. **Clear already-downloaded data (optional):**
 
    * Look in `/Library/Application Support/com.apple.idleassetsd` or `/System/Library/Assets` (read-only without disabling SIP).
    * Usually safe to leave them, but if space is critical, you can clean caches.

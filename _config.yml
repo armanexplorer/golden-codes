@@ -448,3 +448,6 @@ collections:
   cursor:
     output: true
     permalink: /:collection/:name
+  nettop:
+    output: true
+    permalink: /:collection/:name
