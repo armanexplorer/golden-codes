@@ -57,10 +57,23 @@ Add this to the `/etc/hosts`:
 127.0.0.1             sylvan.apple.com
 ```
 
+OR
+
+```bash
+sudo sh -c 'printf "\n# Block idleassetsd fetches\n127.0.0.1 sylvan.apple.com\n" >> /etc/hosts'
+sudo dscacheutil -flushcache
+```
+
 ### Stop it HARSHLY
 
 ```bash
 sudo killall idleassetsd; sudo rm -r "/Library/Application Support/com.apple.idleassetsd
+```
+
+OR
+
+```bash
+sudo killall idleassetsd; sudo rm -rf "/Library/Application Support/com.apple.idleassetsd/Customer/"*
 ```
 
 ### How to prevent huge background downloads
@@ -71,6 +84,8 @@ Unfortunately, Apple doesn’t give a simple toggle for `idleassetsd`, but you c
 
    > I contacted Apple Support and they recommended setting Wallpapers and Screensavers to a static image.
    > After restarting Activity Monitor `idleassetsd` stopped downloading as it is now at 0 bytes sent and recieved.
+
+   ![alt text](image.png)
 
 2. **Block large background traffic:**
 
