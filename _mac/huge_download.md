@@ -18,6 +18,28 @@ That **84.3 GB in 3 hours** is huge. It likely means your Mac pulled down:
 
 ---
 
+### Monitor it
+
+#### Using nettop
+
+```bash
+sudo nettop -p idleassetsd -J bytes_in,bytes_out
+```
+
+#### Using Activity Monitor app
+
+You should enable `All Processes` from the `View` menu bar first:
+
+![Enable All Processes in the View](image.png)
+
+Then you can also enable the Recvd and Sent Bytes in:
+
+![Enable Recvd and Sent Bytes columns](image-1.png)
+
+And then if you search `idleassetsd`, you can see the result:
+
+![alt text](image-2.png)
+
 ### Stop it FAST and WILDLY
 
 Add this to the `/etc/hosts`:
