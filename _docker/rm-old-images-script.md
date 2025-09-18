@@ -2,6 +2,8 @@
 title: script to remove old images
 ---
 
+{% raw %}
+
 ```bash
 # Get the current date
 current_date=$(date +%s)
@@ -24,3 +26,5 @@ for image in $(docker images -a -q); do
 done
 
 ```
+
+{% endraw %}

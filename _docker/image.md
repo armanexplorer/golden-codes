@@ -42,9 +42,13 @@ docker image prune --filter "until=$((30*24))h"
 
 ## remove dangling images without prune
 
+{% raw %}
+
 ```bash
 docker images --format "{{.ID}}" --filter "dangling=true" | xargs docker image rm --force
 ```
+
+{% endraw %}
 
 ## busybox
 
@@ -57,6 +61,8 @@ BusyBox is a lightweight Linux operating system image used as the base for the s
 By using BusyBox, you create a lightweight and efficient container specifically designed to execute your script. It avoids the overhead of a larger operating system, making it a suitable choice for this sidecar container approach.
 
 ## example of removing specific images by script
+
+{% raw %}
 
 ```bash
 #!/bin/bash
@@ -79,3 +85,5 @@ for image in $(docker images -a -q); do
     fi
 done
 ```
+
+{% endraw %}

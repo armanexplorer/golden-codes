@@ -6,6 +6,8 @@ title: monitoring container resource usages
 
 ## human-readable command as bash alias
 
+{% raw %}
+
 ```bash
 # docker stats usage - human readable version
 alias dstat='printf "%-40s\tMem Usage\tMem %%\t\tCPU %%\n" "Name"; \
@@ -20,6 +22,8 @@ alias dstat='printf "%-40s\tMem Usage\tMem %%\t\tCPU %%\n" "Name"; \
   printf("\t%s\t\t%s\n", $5, $6); \
 }'\'' | sort -nrk 2'
 ```
+
+{% endraw %}
 
 ## string manipulation (for gawk)
 

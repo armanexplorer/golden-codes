@@ -123,6 +123,8 @@ docker compose up -d
 
 ## take backup of databases
 
+{% raw %}
+
 ```bash
 #!/bin/bash
 
@@ -135,6 +137,8 @@ do
   docker exec -t $container bash -c 'pg_dump -U $POSTGRES_USER -d $POSTGRES_DB --clean' > /opt/backups/pg_dumps/pg_dump-$container.sql;
 done
 ```
+
+{% endraw %}
 
 ## mirage
 

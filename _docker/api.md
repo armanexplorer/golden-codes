@@ -53,6 +53,8 @@ for container in containers:
 
 ### bash client
 
+{% raw %}
+
 ```bash
 #!/bin/bash
 
@@ -97,3 +99,5 @@ do
   migrate_anonymous_volume "$container" "$new_volume_name"
 done
 ```
+
+{% endraw %}

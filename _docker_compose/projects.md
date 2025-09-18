@@ -32,9 +32,13 @@ Docker Compose does not provide a direct command to list the current namespaces 
 
 To list all running containers and their project names, you can use the following command:
 
+{% raw %}
+
 ```bash
 docker ps --format '{{.Names}}'
 ```
+
+{% endraw %}
 
 This command will display the names of all running containers. The project name is the prefix of the container name, separated by an underscore.
 
@@ -42,8 +46,12 @@ For example, if you see container names like `project1_web_1`, `project1_db_1`, 
 
 To filter the containers by a specific project name, you can use the `grep` command:
 
+{% raw %}
+
 ```bash
 docker ps --format '{{.Names}}' | grep '^project1'
 ```
+
+{% endraw %}
 
 This command will display only the containers with the `project1` prefix, indicating that they belong to the `project1` namespace

@@ -2,6 +2,8 @@
 title: How to deal with huge mac downloads
 ---
 
+[Related Link](https://discussions.apple.com/thread/255329956?answerId=260590672022&sortBy=oldest_first#260590672022)
+
 ## idleassetsd
 
 * **`idleassetsd`**: This is a macOS system process introduced in recent macOS versions. It handles *"idle assets"* — large downloads that the system schedules when your Mac is idle or on Wi-Fi + power. This can include:
@@ -30,15 +32,21 @@ sudo nettop -p idleassetsd -J bytes_in,bytes_out
 
 You should enable `All Processes` from the `View` menu bar first:
 
-![Enable All Processes in the View](image.png)
+![Enable All Processes in the View](/assets/images/mac/image.png)
 
 Then you can also enable the Recvd and Sent Bytes in:
 
-![Enable Recvd and Sent Bytes columns](image-1.png)
+![Enable Recvd and Sent Bytes columns](/assets/images/mac/image-1.png)
 
 And then if you search `idleassetsd`, you can see the result:
 
-![alt text](image-2.png)
+![alt text](/assets/images/mac/image-2.png)
+
+#### Using lsof
+
+```bash
+lsof | grep -i idle
+```
 
 ### Stop it FAST and WILDLY
 
@@ -47,6 +55,12 @@ Add this to the `/etc/hosts`:
 ```bash
 # workaround for idleassets bandwidth consumption
 127.0.0.1             sylvan.apple.com
+```
+
+### Stop it HARSHLY
+
+```bash
+sudo killall idleassetsd; sudo rm -r "/Library/Application Support/com.apple.idleassetsd
 ```
 
 ### How to prevent huge background downloads

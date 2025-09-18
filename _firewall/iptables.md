@@ -176,6 +176,8 @@ iptables -t nat -I POSTROUTING 1 -s 172.18.0.1 -j SNAT --to-source 192.168.1.101
 
 ### auto script
 
+{% raw %}
+
 ```bash
 # enter container name
 echo enter container name
@@ -197,3 +199,5 @@ sudo iptables -t nat -I POSTROUTING -p all -s $container_ip/32 -j SNAT --to-sour
 # verify rule has been added
 sudo iptables -t nat -v -L POSTROUTING -n --line-number | grep $container_ip
 ```
+
+{% endraw %}

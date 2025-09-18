@@ -89,6 +89,8 @@ docker exec -it registry bin/registry garbage-collect /etc/docker/registry/confi
 
 ## migrate old docker registry to new one
 
+{% raw %}
+
 ```bash
 #!/bin/bash
 
@@ -113,3 +115,5 @@ do
   echo -e "DONE!\n"
 done
 ```
+
+{% endraw %}
